@@ -35,18 +35,5 @@ public class DbUtil {
 
     }
 
-    public static void closeConnection() throws SQLException {
-        try {
-            if (CONEXION != null) {
-                CONEXION.close();
-                CONEXION = null;
-            }
-
-        } catch (SQLException e) {
-            //Integracion Log4J
-            throw new SQLException(e);
-        }
-
-    }
 
 }
