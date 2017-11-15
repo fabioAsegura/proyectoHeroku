@@ -11,6 +11,7 @@ import Model.Activo;
 import Model.Solicitante;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -60,6 +61,8 @@ public class Solicitantee extends HttpServlet {
 
         } catch (SQLException ex) {
             Logger.getLogger(Solicitantee.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(Solicitantee.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -81,6 +84,8 @@ public class Solicitantee extends HttpServlet {
             response.sendRedirect("Solicitantee");
 
         } catch (SQLException ex) {
+            Logger.getLogger(Solicitantee.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
             Logger.getLogger(Solicitantee.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

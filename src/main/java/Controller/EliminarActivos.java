@@ -9,6 +9,7 @@ import DAO.ActivoDAO;
 import Model.Activo;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -57,6 +58,8 @@ public class EliminarActivos extends HttpServlet {
 
         } catch (SQLException ex) {
             Logger.getLogger(EliminarActivos.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(EliminarActivos.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -77,6 +80,8 @@ public class EliminarActivos extends HttpServlet {
             ActivoDAO a = new ActivoDAO();
             a.deleteActivo(idA);
         } catch (SQLException ex) {
+            Logger.getLogger(EliminarActivos.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
             Logger.getLogger(EliminarActivos.class.getName()).log(Level.SEVERE, null, ex);
         }
 

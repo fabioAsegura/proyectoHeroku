@@ -11,6 +11,7 @@ import Model.Activo;
 import Model.Auxiliar;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -59,6 +60,8 @@ public class BuscarAuxiliares extends HttpServlet {
             request.getRequestDispatcher("BuscarAuxiliar.jsp").forward(request, response);
 
         } catch (SQLException ex) {
+            Logger.getLogger(BuscarAuxiliares.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
             Logger.getLogger(BuscarAuxiliares.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

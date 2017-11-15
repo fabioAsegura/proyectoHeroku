@@ -9,6 +9,7 @@ import DAO.SolicitanteDAO;
 import Model.Solicitante;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -58,6 +59,8 @@ public class BuscarSolicitantes extends HttpServlet {
             request.getRequestDispatcher("BuscarSolicitante.jsp").forward(request, response);
 
         } catch (SQLException ex) {
+            Logger.getLogger(BuscarSolicitantes.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
             Logger.getLogger(BuscarSolicitantes.class.getName()).log(Level.SEVERE, null, ex);
         }
 

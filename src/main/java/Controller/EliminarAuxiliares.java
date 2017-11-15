@@ -11,6 +11,7 @@ import Model.Activo;
 import Model.Auxiliar;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -60,6 +61,8 @@ public class EliminarAuxiliares extends HttpServlet {
 
         } catch (SQLException ex) {
             Logger.getLogger(EliminarAuxiliares.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(EliminarAuxiliares.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -80,6 +83,8 @@ public class EliminarAuxiliares extends HttpServlet {
             AuxiliarDAO a = new AuxiliarDAO();
             a.deleteAuxiliar(idA);
         } catch (SQLException ex) {
+            Logger.getLogger(EliminarAuxiliares.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
             Logger.getLogger(EliminarAuxiliares.class.getName()).log(Level.SEVERE, null, ex);
         }
 

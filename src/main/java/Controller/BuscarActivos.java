@@ -9,6 +9,7 @@ import DAO.ActivoDAO;
 import Model.Activo;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -57,6 +58,8 @@ public class BuscarActivos extends HttpServlet {
             request.getRequestDispatcher("BuscarActivo.jsp").forward(request, response);
 
         } catch (SQLException ex) {
+            Logger.getLogger(BuscarActivos.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
             Logger.getLogger(BuscarActivos.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

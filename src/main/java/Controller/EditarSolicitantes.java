@@ -9,6 +9,7 @@ import DAO.SolicitanteDAO;
 import Model.Solicitante;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -65,6 +66,8 @@ public class EditarSolicitantes extends HttpServlet {
 
         } catch (SQLException ex) {
             Logger.getLogger(EditarSolicitantes.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(EditarSolicitantes.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -92,6 +95,8 @@ public class EditarSolicitantes extends HttpServlet {
             dao.updateSolicitante(id_solicitante, nombre, apellido, escuela, tipo);
 
         } catch (SQLException ex) {
+            Logger.getLogger(EditarSolicitantes.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
             Logger.getLogger(EditarSolicitantes.class.getName()).log(Level.SEVERE, null, ex);
         }
         response.sendRedirect("Solicitantee");

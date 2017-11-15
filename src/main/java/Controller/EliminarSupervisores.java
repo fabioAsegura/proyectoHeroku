@@ -9,6 +9,7 @@ import DAO.SupervisorDAO;
 import Model.Supervisor;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -59,6 +60,8 @@ public class EliminarSupervisores extends HttpServlet {
 
         } catch (SQLException ex) {
             Logger.getLogger(EliminarSupervisores.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(EliminarSupervisores.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -80,6 +83,8 @@ public class EliminarSupervisores extends HttpServlet {
             SupervisorDAO a = new SupervisorDAO();
             a.deleteSupervidor(idA);
         } catch (SQLException ex) {
+            Logger.getLogger(EliminarSupervisores.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
             Logger.getLogger(EliminarSupervisores.class.getName()).log(Level.SEVERE, null, ex);
         }
 

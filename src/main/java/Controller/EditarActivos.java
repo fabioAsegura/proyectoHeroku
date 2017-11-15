@@ -8,6 +8,7 @@ package Controller;
 import DAO.ActivoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -71,6 +72,8 @@ public class EditarActivos extends HttpServlet {
 
         } catch (SQLException ex) {
             Logger.getLogger(EditarActivos.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(EditarActivos.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -100,6 +103,8 @@ public class EditarActivos extends HttpServlet {
             dao.updateActivo(idActivo, tipo, fabricante, fechaC, mantenimiento, estado, prestado, calificacion);
 
         } catch (SQLException ex) {
+            Logger.getLogger(EditarActivos.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
             Logger.getLogger(EditarActivos.class.getName()).log(Level.SEVERE, null, ex);
         }
         response.sendRedirect("Activoo");

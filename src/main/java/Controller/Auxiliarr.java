@@ -9,6 +9,7 @@ import DAO.AuxiliarDAO;
 import Model.Auxiliar;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -58,6 +59,8 @@ public class Auxiliarr extends HttpServlet {
 
         } catch (SQLException ex) {
             Logger.getLogger(Auxiliarr.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(Auxiliarr.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -80,6 +83,8 @@ public class Auxiliarr extends HttpServlet {
             response.sendRedirect("Auxiliarr");
 
         } catch (SQLException ex) {
+            Logger.getLogger(Auxiliarr.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
             Logger.getLogger(Auxiliarr.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

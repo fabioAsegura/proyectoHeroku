@@ -10,6 +10,7 @@ import DAO.SupervisorDAO;
 import Model.Supervisor;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -60,6 +61,8 @@ public class Supervisorr extends HttpServlet {
 
         } catch (SQLException ex) {
             Logger.getLogger(Supervisorr.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(Supervisorr.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -81,6 +84,8 @@ public class Supervisorr extends HttpServlet {
             response.sendRedirect("Supervisorr");
 
         } catch (SQLException ex) {
+            Logger.getLogger(Supervisorr.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
             Logger.getLogger(Supervisorr.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
