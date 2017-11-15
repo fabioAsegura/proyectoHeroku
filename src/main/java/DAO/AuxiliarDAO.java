@@ -8,6 +8,7 @@ package DAO;
 import Model.Auxiliar;
 import Model.Supervisor;
 import Util.DbUtil;
+import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,11 +25,11 @@ public class AuxiliarDAO {
 
     private Connection connection;
 
-    public AuxiliarDAO() throws SQLException {
+    public AuxiliarDAO() throws SQLException, URISyntaxException {
         connection = DbUtil.getConnection();
     }
 
-    public boolean addAuxiliar(Auxiliar auxiliar) throws SQLException {
+    public boolean addAuxiliar(Auxiliar auxiliar) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "insert into auxiliar (auxiliar.id_auxiliar,auxiliar.nombre_auxiliar,auxiliar.apellido_auxiliar,auxiliar.fecha_entrada,auxiliar.turno,auxiliar.id_supervisor) values (?, ?, ?, ?, ?, ?);";
@@ -50,7 +51,7 @@ public class AuxiliarDAO {
         return result;
     }
 
-    public boolean deleteAuxiliar(int a) throws SQLException {
+    public boolean deleteAuxiliar(int a) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "delete from auxiliar where id_auxiliar = ?";
@@ -66,7 +67,7 @@ public class AuxiliarDAO {
         return result;
     }
 
-    public ArrayList<Auxiliar> getAllAuxiliar() throws SQLException {
+    public ArrayList<Auxiliar> getAllAuxiliar() throws SQLException, URISyntaxException {
         ArrayList<Auxiliar> auxiliar = null;
         boolean result = false;
         String query = "SELECT * FROM auxiliar";
@@ -124,7 +125,7 @@ public class AuxiliarDAO {
 
     }
 
-    public ArrayList<Auxiliar> getAuxiliarID(int a) throws SQLException {
+    public ArrayList<Auxiliar> getAuxiliarID(int a) throws SQLException, URISyntaxException {
         ArrayList<Auxiliar> auxiliar = null;
         boolean result = false;
         String query = "SELECT * FROM auxiliar where id_auxiliar = " + a;
@@ -182,7 +183,7 @@ public class AuxiliarDAO {
 
     }
 
-    public boolean updateAuxiliar(int a, String nombre, String apellido, String fechaEntrada, String turno, int id_supervisor) throws SQLException {
+    public boolean updateAuxiliar(int a, String nombre, String apellido, String fechaEntrada, String turno, int id_supervisor) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "update auxiliar set nombre_auxiliar = ?, apellido_auxiliar = ?, fecha_entrada = ?, turno = ?, id_supervisor = ? where id_auxiliar = " + a;

@@ -7,6 +7,7 @@ package DAO;
 
 import Model.Solicitante;
 import Util.DbUtil;
+import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -23,11 +24,11 @@ public class SolicitanteDAO {
 
     private Connection connection;
 
-    public SolicitanteDAO() throws SQLException {
+    public SolicitanteDAO() throws SQLException, URISyntaxException {
         connection = DbUtil.getConnection();
     }
 
-    public boolean addSolicitante(Solicitante solicitante) throws SQLException {
+    public boolean addSolicitante(Solicitante solicitante) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "insert into solicitante (solicitante.id_solicitante,solicitante.nombre_solicitante,solicitante.apellido_solicitante,solicitante.escuela,solicitante.tipo) values (?,?,?,?,?);";
@@ -46,7 +47,7 @@ public class SolicitanteDAO {
         return result;
     }
 
-    public boolean deleteSolicitante(int a) throws SQLException {
+    public boolean deleteSolicitante(int a) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "delete from solicitante where id_solicitante = ?";
@@ -62,7 +63,7 @@ public class SolicitanteDAO {
         return result;
     }
 
-    public ArrayList<Solicitante> getAllSolicitante() throws SQLException {
+    public ArrayList<Solicitante> getAllSolicitante() throws SQLException, URISyntaxException {
         ArrayList<Solicitante> solicitante = null;
         boolean result = false;
         String query = "SELECT * FROM solicitante";
@@ -117,7 +118,7 @@ public class SolicitanteDAO {
 
     }
 
-    public ArrayList<Solicitante> getSolicitanteID(int a) throws SQLException {
+    public ArrayList<Solicitante> getSolicitanteID(int a) throws SQLException, URISyntaxException {
         ArrayList<Solicitante> solicitante = null;
         boolean result = false;
         String query = "SELECT * FROM solicitante where id_solicitante =" + a;
@@ -172,7 +173,7 @@ public class SolicitanteDAO {
 
     }
 
-    public boolean updateSolicitante(int a, String nombre, String apellido, String escuela, String tipo) throws SQLException {
+    public boolean updateSolicitante(int a, String nombre, String apellido, String escuela, String tipo) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "update solicitante set nombre_solicitante = ?, apellido_solicitante = ?, escuela = ?, tipo = ? where id_solicitante = " + a;

@@ -7,6 +7,7 @@ package DAO;
 
 import Model.Prestamo;
 import Util.DbUtil;
+import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -23,11 +24,11 @@ public class PrestamoDAO {
 
     private Connection connection;
 
-    public PrestamoDAO() throws SQLException {
+    public PrestamoDAO() throws SQLException, URISyntaxException {
         connection = DbUtil.getConnection();
     }
 
-    public boolean addPrestamo(Prestamo prestamo) throws SQLException {
+    public boolean addPrestamo(Prestamo prestamo) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "insert into prestamo (prestamo.id_prestamo,prestamo.id_solicitante,prestamo.id_trabajador,prestamo.activo,prestamo.tipo,prestamo.fecha_entrada,prestamo.fecha_salida) values (?,?,?,?,?,?,?);";
@@ -52,7 +53,7 @@ public class PrestamoDAO {
         return result;
     }
 
-    public boolean deletePrestamo(int a) throws SQLException {
+    public boolean deletePrestamo(int a) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "delete from prestamo  where id_prestamo= ?";
@@ -68,7 +69,7 @@ public class PrestamoDAO {
         return result;
     }
 
-    public ArrayList<Prestamo> getAllPrestamo() throws SQLException {
+    public ArrayList<Prestamo> getAllPrestamo() throws SQLException, URISyntaxException {
         ArrayList<Prestamo> prestamo = null;
         boolean result = false;
         String query = "SELECT * FROM prestamo";

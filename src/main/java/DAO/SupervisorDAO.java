@@ -7,6 +7,7 @@ package DAO;
 
 import Model.Supervisor;
 import Util.DbUtil;
+import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -23,11 +24,11 @@ public class SupervisorDAO {
 
     private Connection connection;
 
-    public SupervisorDAO() throws SQLException {
+    public SupervisorDAO() throws SQLException, URISyntaxException {
         connection = DbUtil.getConnection();
     }
 
-    public boolean addSupervisor(Supervisor supervisor) throws SQLException {
+    public boolean addSupervisor(Supervisor supervisor) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "insert into supervisor (supervisor.id_supervisor,supervisor.nombre_supervisor,supervisor.apellido_supervisor,supervisor.fecha_entrada) values (?, ?, ?, ? );";
@@ -45,7 +46,7 @@ public class SupervisorDAO {
         return result;
     }
 
-    public boolean deleteSupervidor(int a) throws SQLException {
+    public boolean deleteSupervidor(int a) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "delete from supervisor where id_supervisor = ?";
@@ -61,7 +62,7 @@ public class SupervisorDAO {
         return result;
     }
 
-    public ArrayList<Supervisor> getAllSupervisor() throws SQLException {
+    public ArrayList<Supervisor> getAllSupervisor() throws SQLException, URISyntaxException {
         ArrayList<Supervisor> supervisor = null;
         boolean result = false;
         String query = "SELECT * FROM supervisor";
@@ -112,7 +113,7 @@ public class SupervisorDAO {
 
     }
 
-    public ArrayList<Supervisor> getSupervisorID(int a) throws SQLException {
+    public ArrayList<Supervisor> getSupervisorID(int a) throws SQLException, URISyntaxException {
         ArrayList<Supervisor> supervisor = null;
         boolean result = false;
         String query = "SELECT * FROM supervisor where id_supervisor = " + a;
@@ -163,7 +164,7 @@ public class SupervisorDAO {
 
     }
 
-    public boolean updateSupervisor(int a, String nombre, String apellido, String fechaEntrada) throws SQLException {
+    public boolean updateSupervisor(int a, String nombre, String apellido, String fechaEntrada) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "update supervisor set nombre_supervisor = ?, apellido_supervisor = ?, fecha_entrada = ? where id_supervisor = " + a;

@@ -8,6 +8,7 @@ package DAO;
 import Model.Activo;
 import Model.Supervisor;
 import Util.DbUtil;
+import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,11 +25,11 @@ public class ActivoDAO {
 
     private Connection connection;
 
-    public ActivoDAO() throws SQLException {
+    public ActivoDAO() throws SQLException, URISyntaxException {
         connection = DbUtil.getConnection();
     }
 
-    public boolean addActivo(Activo activo) throws SQLException {
+    public boolean addActivo(Activo activo) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "insert into activo (activo.id_activo,activo.tipo,activo.fabricante,activo.fecha_compra,activo.ultimo_mantenimiento,activo.estado,activo.prestado,activo.calificacion) values (?,?,?,?,?,?,?,? );";
@@ -51,7 +52,7 @@ public class ActivoDAO {
         return result;
     }
 
-    public boolean deleteActivo(int a) throws SQLException {
+    public boolean deleteActivo(int a) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "delete from activo  where id_activo= ?";
@@ -67,7 +68,7 @@ public class ActivoDAO {
         return result;
     }
 
-    public ArrayList<Activo> getAllActivo() throws SQLException {
+    public ArrayList<Activo> getAllActivo() throws SQLException, URISyntaxException {
         ArrayList<Activo> activo = null;
         boolean result = false;
         String query = "SELECT * FROM activo";
@@ -133,7 +134,7 @@ public class ActivoDAO {
 
     }
 
-    public ArrayList<Activo> getActivoID(int a) throws SQLException {
+    public ArrayList<Activo> getActivoID(int a) throws SQLException, URISyntaxException {
         ArrayList<Activo> activo = null;
         boolean result = false;
         String query = "SELECT * FROM activo where id_activo = " + a;
@@ -199,7 +200,7 @@ public class ActivoDAO {
 
     }
 
-    public boolean updateActivo(int a, String tipo, String fabricante, String fecha_compra, String ultimo_mantenimiento, String estado, String prestado, int calificacion) throws SQLException {
+    public boolean updateActivo(int a, String tipo, String fabricante, String fecha_compra, String ultimo_mantenimiento, String estado, String prestado, int calificacion) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "update activo set tipo = ?, fabricante = ?, fecha_compra = ?, ultimo_mantenimiento = ?, estado = ?, prestado = ?, calificacion = ? where id_activo = " + a;
