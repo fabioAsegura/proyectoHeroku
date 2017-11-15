@@ -31,7 +31,7 @@ public class SolicitanteDAO {
     public boolean addSolicitante(Solicitante solicitante) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
-        String query = "insert into solicitante (solicitante.id_solicitante,solicitante.nombre_solicitante,solicitante.apellido_solicitante,solicitante.escuela,solicitante.tipo) values (?,?,?,?,?);";
+        String query = "insert into solicitante (id_solicitante,nombre_solicitante,apellido_solicitante,escuela,tipo) values (?,?,?,?,?);";
         PreparedStatement preparedStmt = null;
         try {
             preparedStmt = connection.prepareStatement(query);

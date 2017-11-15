@@ -31,7 +31,7 @@ public class PrestamoDAO {
     public boolean addPrestamo(Prestamo prestamo) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
-        String query = "insert into prestamo (prestamo.id_prestamo,prestamo.id_solicitante,prestamo.id_trabajador,prestamo.activo,prestamo.tipo,prestamo.fecha_entrada,prestamo.fecha_salida) values (?,?,?,?,?,?,?);";
+        String query = "insert into prestamo (id_prestamo,id_solicitante,id_trabajador,activo,tipo,fecha_entrada,fecha_salida) values (?,?,?,?,?,?,?);";
         PreparedStatement preparedStmt = null;
         try {
             ArrayList<Integer> activos = prestamo.getActivo();

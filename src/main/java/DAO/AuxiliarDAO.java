@@ -32,7 +32,7 @@ public class AuxiliarDAO {
     public boolean addAuxiliar(Auxiliar auxiliar) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
-        String query = "insert into auxiliar (auxiliar.id_auxiliar,auxiliar.nombre_auxiliar,auxiliar.apellido_auxiliar,auxiliar.fecha_entrada,auxiliar.turno,auxiliar.id_supervisor) values (?, ?, ?, ?, ?, ?);";
+        String query = "insert into auxiliar (id_auxiliar,nombre_auxiliar,apellido_auxiliar,fecha_entrada,turno,id_supervisor) values (?, ?, ?, ?, ?, ?);";
 
         PreparedStatement preparedStmt = null;
         try {

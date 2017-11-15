@@ -31,7 +31,7 @@ public class SupervisorDAO {
     public boolean addSupervisor(Supervisor supervisor) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
-        String query = "insert into supervisor (supervisor.id_supervisor,supervisor.nombre_supervisor,supervisor.apellido_supervisor,supervisor.fecha_entrada) values (?, ?, ?, ? );";
+        String query = "insert into supervisor (id_supervisor,nombre_supervisor,apellido_supervisor,fecha_entrada) values (?, ?, ?, ? );";
         PreparedStatement preparedStmt = null;
         try {
             preparedStmt = connection.prepareStatement(query);
