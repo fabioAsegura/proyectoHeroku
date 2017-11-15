@@ -48,6 +48,7 @@ public class Activoo extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        System.out.println("Hola");
         try {
             ActivoDAO obj = new ActivoDAO();
 
@@ -56,6 +57,7 @@ public class Activoo extends HttpServlet {
             request.setAttribute("listaActivos", lista);
 
             request.getRequestDispatcher("Activos.jsp").forward(request, response);
+           
 
         } catch (SQLException ex) {
             Logger.getLogger(Activoo.class.getName()).log(Level.SEVERE, null, ex);
