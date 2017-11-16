@@ -78,6 +78,8 @@
         
                             <button type="submit" class="btn btn-default" name="Enviar">Enviar</button>
                         </form>
+                                <br>
+                                <br>
                                 <form class="form-inline" action="" method="POST">
                             <div class="form-group">
                                 <label for="idequipo">ID Activo:</label>
