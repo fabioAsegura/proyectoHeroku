@@ -57,6 +57,10 @@
                     <h1>Mantenimiento Preventivo</h1>
                     <p></p>
                     <hr>
+                    <div class="span12">&nbsp;</div>
+                    <button onclick="window.location.href = 'MantenimientoPreventivos?action=delete'" type="button" type="button" class="btn-sm btn-success">Crear Mantenimiento Preventivo</button>
+                    <div class="span12">&nbsp;</div>
+                    
                     <div class="container">   
                         <form class="form-inline" action="MantenimientoPreventivos" method="POST">
                             <div class="form-group">
