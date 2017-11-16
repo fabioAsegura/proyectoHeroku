@@ -56,9 +56,6 @@
                 <div class="col-sm-8 text-left"> 
                     <h1>Mantenimiento Preventivo</h1>
                    
-                    <div class="span12">&nbsp;</div>
-                    <button onclick="window.location.href = 'MantenimientoPreventivos?action=delete'" type="button" type="button" class="btn-sm btn-success">Crear Mantenimiento Preventivo</button>
-                    <div class="span12">&nbsp;</div>
                     
                     <div class="container">   
                         <form class="form-inline" action="MantenimientoPreventivos" method="POST">
@@ -78,6 +75,28 @@
                                 <br> 
 
                             </div>
+        
+                            <button type="submit" class="btn btn-default" name="Enviar">Enviar</button>
+                        </form>
+                                <form class="form-inline" action="" method="POST">
+                            <div class="form-group">
+                                <label for="idequipo">ID Activo:</label>
+                                <input  class="form-control" name="idActivo">
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input  class="form-control" name="nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="calificacion">Descripcion:</label>
+                                <input  class="form-control" name="descripcion">
+                            </div>
+                            <div class="span12">&nbsp;</div>
+                            <div class="form-group">
+                                <label for="fechaC">Materiales:</label>
+                                <input  class="form-control" name="materiales">
+                            </div>
+                        
         
                             <button type="submit" class="btn btn-default" name="Enviar">Enviar</button>
                         </form>
