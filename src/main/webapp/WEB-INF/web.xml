@@ -69,12 +69,12 @@
         <servlet-class>Controller.EditarPrestamos</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>MantenimientitoPreventivos</servlet-name>
-        <servlet-class>Controller.MantenimientitoPreventivos</servlet-class>
+        <servlet-name>MantenimientoPreventivos</servlet-name>
+        <servlet-class>Controller.MantenimientoPreventivos</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>MantenimientitoPreventivos</servlet-name>
-        <url-pattern>/MantenimientitoPreventivos</url-pattern>
+        <servlet-name>MantenimientoPreventivos</servlet-name>
+        <url-pattern>/MantenimientoPreventivos</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Activoo</servlet-name>
