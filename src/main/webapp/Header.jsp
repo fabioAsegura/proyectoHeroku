@@ -1,10 +1,7 @@
-<%@page import="Model.Activo"%>
-<%@page import="Model.Trabajador"%>
-<%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Mantenimiento Preventivo</title>
+        <title>Header</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -70,46 +67,6 @@
                 </div>
             </div>
         </nav>
-
-        <div class="container-fluid text-center">    
-            <div class="row content">
-                <div class="col-sm-2 sidenav">
-
-                </div>
-                <div class="col-sm-8 text-left"> 
-                    <h1>Mantenimiento Preventivo</h1>
-                    <p></p>
-                    <hr>
-                    <div class="container">   
-                        <form class="form-inline" action="MantenimientoPreventivos" method="POST">
-                            <div class="form-group">
-                                <label for="tipo">Id Activo:</label>
-                                <select class="form-control" name="mantenimientoP">
-                                    <%
-                                        if (request.getAttribute("activos") != null) {
-                                            ArrayList<Activo> array = (ArrayList<Activo>) request.getAttribute("activos");
-                                            for (Activo a : array) {
-                                    %> 
-                                    <option value="<%=a.getId_activo()%>"><%=a.getId_activo()%></option> 
-                                    <%      }
-                                        }
-                                    %> 
-                                </select>   
-                                <br> 
-
-                            </div>
-        
-                            <button type="submit" class="btn btn-default" name="Enviar">Enviar</button>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <footer class="container-fluid text-center">
-            <p>Universidad Sergio Arboleda</p>
-        </footer>
 
     </body>
 </html>
