@@ -60,7 +60,7 @@
                     <div class="container">   
                         <form class="form-inline" action="MantenimientoPreventivos" method="POST">
                             <div class="form-group">
-                                <label for="tipo">Id Activo:</label>
+                                <label for="tipo">ID Activo:</label>
                                 <select class="form-control" name="mantenimientoP">
                                     <%
                                         if (request.getAttribute("activos") != null) {
@@ -86,7 +86,7 @@
                                 <input  class="form-control" name="idActivo">
                             </div>
                             <div class="form-group">
-                                <label for="nombre">Nombre:</label>
+                                <label for="nombre">Nombre Activo:</label>
                                 <input  class="form-control" name="nombre">
                             </div>
                             <div class="form-group">
