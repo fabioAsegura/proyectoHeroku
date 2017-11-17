@@ -197,6 +197,16 @@
     </servlet-mapping>
     
     
+    <servlet>
+        <servlet-name>EliminarPrestamo</servlet-name>
+        <servlet-class>Controller.EliminarPrestamo</servlet-class>
+    </servlet>
+        <servlet-mapping>
+        <servlet-name>EliminarPrestamo</servlet-name>
+        <url-pattern>/EliminarPrestamo</url-pattern>
+    </servlet-mapping>
+    
+    
      <servlet>
         <servlet-name>Prestamoo</servlet-name>
         <servlet-class>Controller.Prestamoo</servlet-class>
