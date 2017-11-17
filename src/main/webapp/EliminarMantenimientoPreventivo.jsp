@@ -1,5 +1,4 @@
 <%@page import="Model.Mantenimiento"%>
-<%@page import="Model.Trabajador"%>
 <%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html lang="en">
