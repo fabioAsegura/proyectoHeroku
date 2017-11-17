@@ -1,4 +1,7 @@
+<%@page import="Model.Prestamo"%>
+<%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <title>Prestamos</title>
