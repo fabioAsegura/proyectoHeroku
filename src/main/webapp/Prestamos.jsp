@@ -79,7 +79,7 @@
                                 
                             </tr>
                               <% if (request.getAttribute("listaPrestamos") != null) {
-                                    ArrayList<Prestamo> list = (ArrayList<Prestamo>) request.getAttribute("listaPrestamo");
+                                    ArrayList<Prestamo> list = (ArrayList<Prestamo>) request.getAttribute("listaPrestamos");
                                     if (list != null)
                                         for (Prestamo prestamo : list) {
 
