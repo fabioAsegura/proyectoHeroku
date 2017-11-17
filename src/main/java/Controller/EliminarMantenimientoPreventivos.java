@@ -83,7 +83,7 @@ public class EliminarMantenimientoPreventivos extends HttpServlet {
             Logger.getLogger(EliminarMantenimientoPreventivos.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        response.sendRedirect("MantenimientoPreventivo");
+        response.sendRedirect("MantenimientoPreventivos");
     }
 
     /**
