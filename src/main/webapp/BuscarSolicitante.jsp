@@ -56,8 +56,6 @@
                     <h1>Buscar Solicitante</h1>
                     <p></p>
                     <hr>
-                    <button onclick="window.location.href = 'Solicitantee'" type="button" type="button" class="btn-sm btn-warning">Volver</button>
-
                     <div class="container">   
                         <form class="form-inline" action="BuscarSolicitantes" method="GET">
 
@@ -69,6 +67,8 @@
                             <br>
                             <div class="span12">&nbsp;</div>
                             <button type="submit" class="btn btn-default">Enviar</button>
+                            <button onclick="window.location.href = 'Solicitantee'" type="button" type="button" class="btn-sm btn-warning">Volver</button>
+
                         </form>
                     </div>
                     <div class="span12">&nbsp;</div>
