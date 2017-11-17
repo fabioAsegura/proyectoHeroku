@@ -54,10 +54,10 @@
                     <p></p>
                     <hr>
                     <div class="container">   
-                        <form class="form-inline">
+                        <form class="form-inline"action="EliminarPrestamo" method="POST">
                             <div class="form-group">
-                                <label for="idequipo">ID Solicitante:</label>
-                                <input  class="form-control" id="idequipo">
+                                <label for="id_solicitante">ID Solicitante:</label>
+                                <input  class="form-control" name="eliminarPrestamo">
                             </div>
 
                             <br>
