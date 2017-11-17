@@ -215,6 +215,15 @@
         <url-pattern>/NoPrestadoss</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>Prestadoss</servlet-name>
+        <servlet-class>Controller.Prestadoss</servlet-class>
+    </servlet>
+        <servlet-mapping>
+        <servlet-name>Prestadoss</servlet-name>
+        <url-pattern>/Prestadoss</url-pattern>
+    </servlet-mapping>
+    
     
     <session-config>
         <session-timeout>

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Activos No Prestados</title>
+        <title>Activos Prestados</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -71,8 +71,8 @@
                                 <th>Calificacion</th>
                                 <th>Categoria</th>
                             </tr>
-                            <% if (request.getAttribute("listaNoPrestados") != null) {
-                                ArrayList<Activo> list = (ArrayList<Activo>) request.getAttribute("listaNoPrestados");
+                            <% if (request.getAttribute("listaPrestados") != null) {
+                                ArrayList<Activo> list = (ArrayList<Activo>) request.getAttribute("listaPrestados");
                                 if (list != null)
                                     for (Activo activo : list) {
 
