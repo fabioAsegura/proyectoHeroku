@@ -53,7 +53,7 @@ public class MantenimientoPreventivos extends HttpServlet {
             ActivoDAO a = new ActivoDAO();
             activos = a.getAllActivo();
             request.setAttribute("activos", activos);
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("/MantenimientoPreventivo.jsp");
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/AnadirMantenimientoPreventivo.jsp");
             rd.forward(request, response);
 
         } catch (SQLException ex) {
