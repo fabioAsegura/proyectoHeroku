@@ -63,8 +63,8 @@
                                 <select class="form-control" name="eliminarMantenimiento">
                                     <%
                                         if (request.getAttribute("activos") != null) {
-                                            ArrayList<Activo> array = (ArrayList<Activo>) request.getAttribute("activos");
-                                            for (Activo a : array) {
+                                            ArrayList<Mantenimiento> array = (ArrayList<Mantenimiento>) request.getAttribute("activos");
+                                            for (Mantenimiento a : array) {
                                     %> 
                                     <option value="<%=a.getId_activo()%>"><%=a.getId_activo()%></option> 
                                     <%      }
