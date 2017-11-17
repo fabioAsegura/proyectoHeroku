@@ -198,6 +198,16 @@
     
     
      <servlet>
+        <servlet-name>Prestamoo</servlet-name>
+        <servlet-class>Controller.Prestamoo</servlet-class>
+    </servlet>
+        <servlet-mapping>
+        <servlet-name>Prestamoo</servlet-name>
+        <url-pattern>/Prestamoo</url-pattern>
+    </servlet-mapping>
+    
+    
+     <servlet>
         <servlet-name>EliminarCategoriaa</servlet-name>
         <servlet-class>Controller.EliminarCategoriaa</servlet-class>
     </servlet>
