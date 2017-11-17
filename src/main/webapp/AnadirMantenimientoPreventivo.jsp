@@ -76,16 +76,8 @@
 
                             </div>
                             <div class="form-group">
-                                <label for="nombre">Nombre Activo:</label>
-                                 <%
-                                        if (request.getAttribute("activos") != null) {
-                                            ArrayList<Activo> array = (ArrayList<Activo>) request.getAttribute("activos");
-                                            for (Activo a : array) {
-                                    %> 
-                                    <%      }
-                                        }
-                                    %> 
-                                <input  class="form-control" name="nombre" value="<%=a.getTipo%>" readonly="readonly">
+                                <label for="nombre">Tipo:</label>
+                                <input  class="form-control" name="tipo" value="<%=a.getTipo()%>" readonly="readonly">
                             </div>
                             <div class="form-group">
                                 <label for="calificacion">Descripcion:</label>
