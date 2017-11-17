@@ -47,7 +47,7 @@
     </head>
     <body>
 
-         <%@include file="Header.jsp" %>
+        <%@include file="Header.jsp" %>
 
         <div class="container-fluid text-center">    
             <div class="row content">
@@ -109,13 +109,14 @@
                                     <option>False</option>
                                 </select>
                             </div>
-                                    
-                                     <div class="form-group">
+                            <br>
+                            <br> 
+                            <div class="form-group">
                                 <label for="categoria">Categoria:</label>
                                 <input  class="form-control" name="categoria" value="<%=categoria%>">
                             </div>
-                                <br>
-                                <br>
+                            <br>
+                            <br>
                             <div class="form-group">
                                 <label for="tipo">Calificación</label>
                                 <select class="form-control" name="calificacion" value="<%=calificacion%>">
