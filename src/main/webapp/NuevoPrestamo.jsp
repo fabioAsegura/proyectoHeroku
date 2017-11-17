@@ -58,15 +58,15 @@
                         <form class="form-inline" action="Prestamoo" method="POST">
                             <div class="form-group">
                                 <label for="fecha_entrada">Fecha Entrada:</label>
-                                <input class="form-control" id="id_entrada">
+                                <input class="form-control" name="fecha_entrada">
                             </div>
                             <div class="form-group">
                                 <label for="fecha_salida">Fecha Salida:</label>
-                                <input  class="form-control" id="id_solicitante">
+                                <input  class="form-control" name="fecha_salida">
                             </div>
                           <div class="form-group">
                                     <label for="tipo">Tipo</label>
-                                    <select class="form-control" id="tipo">
+                                    <select class="form-control" name="tipo">
                                         <option>Interno</option>
                                         <option>Externo</option>
                                     </select>
@@ -74,35 +74,35 @@
                             <div class="span12">&nbsp;</div>
                             <div class="form-group">
                                 <label for="activo1">Activo 1:</label>
-                                <input  class="form-control" id="activo1">
+                                <input  class="form-control" name="activo1">
                                
                                 <div class="form-group">
                                     <label for="activo2">Activo 2:</label>
-                                    <input  class="form-control" id="activo2">
+                                    <input  class="form-control" name="activo2">
                                 </div>
                                    <div class="form-group">
                                     <label for="activo3">Activo 3:</label>
-                                    <input  class="form-control" id="activo3">
+                                    <input  class="form-control" name="activo3">
                                 </div>
                                 
                                    <div class="form-group">
                                     <label for="activo4">Activo 4:</label>
-                                    <input  class="form-control" id="activo4">
+                                    <input  class="form-control" name="activo4">
                                 </div>
                                 <br>
                                    <div class="form-group">
                                     <label for="activo5">Activo 5:</label>
-                                    <input  class="form-control" id="activo5">
+                                    <input  class="form-control" name="activo5">
                                 </div>
                                  <br>
                                    <div class="form-group">
                                     <label for="id_solicitante">ID Solicitante:</label>
-                                    <input  class="form-control" id="id_solicitante">
+                                    <input  class="form-control" name="id_solicitante">
                                 </div>
                                  <br>
                                    <div class="form-group">
                                     <label for="id_trabajador">ID Trabajador:</label>
-                                    <input  class="form-control" id="id_Trabajador">
+                                    <input  class="form-control" name="id_trabajador">
                                 </div>
                                 <br>
                                 <div class="span12">&nbsp;</div>
