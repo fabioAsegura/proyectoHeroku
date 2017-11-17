@@ -67,6 +67,7 @@
                                 <th>ID Prestamo</th>
                                 <th>Fecha Entrada</th>
                                 <th>Fecha salida</th>
+                                <th>Tipo</th>
                                 <th>Activo 1</th>
                                 <th>Activo 2</th>
                                 <th>Activo 3</th>
@@ -88,6 +89,7 @@
                                 <td><%=prestamo.getId_prestamo()%></td>
                                 <td><%=prestamo.getFecha_entrada()%></td>
                                 <td><%=prestamo.getFecha_salida()%></td>
+                                <td><%=prestamo.getTipo()%></td>
                                 <td><%=prestamo.getActivo1()%></td>
                                 <td><%=prestamo.getActivo2()%></td>
                                 <td><%=prestamo.getActivo3()%></td>
