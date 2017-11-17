@@ -96,7 +96,7 @@ public class EditarMantenimientoPreventivos extends HttpServlet {
         } catch (URISyntaxException ex) {
             Logger.getLogger(EditarMantenimientoPreventivos.class.getName()).log(Level.SEVERE, null, ex);
         }
-        response.sendRedirect("MantenimientoPreventivo");
+        response.sendRedirect("MantenimientoPreventivos");
 
     }
 
