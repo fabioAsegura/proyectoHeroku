@@ -54,8 +54,10 @@
                 <div class="col-sm-8 text-left"> 
                     <h1>Mantenimiento Preventivo</h1>
                     <div class="span12">&nbsp;</div>
-                    <button onclick="window.location.href = 'AnadirMantenimientoPreventivo.jsp'" type="button" type="button" class="btn-sm btn-success">Añadir Mantenimiento Preventivo</button>
-                    <button onclick="window.location.href = 'EliminarMantenimientoPreventivos?action=delete'" type="button" type="button" class="btn-sm btn-danger">Eliminar Mantenimiento Preventivo</button>
+                    <form class="form-inline" action="MantenimientoPreventivos" method="GET">
+                    <button onclick="window.location.href = 'AnadirMantenimientoPreventivo.jsp'" type="submit" class="btn-sm btn-success">Añadir Mantenimiento Preventivo</button>
+                    </form>
+                        <button onclick="window.location.href = 'EliminarMantenimientoPreventivos?action=delete'" type="button" type="button" class="btn-sm btn-danger">Eliminar Mantenimiento Preventivo</button>
                     <button onclick="window.location.href = 'BuscarMantenimientoPreventivo.jsp'" type="button" type="button" class="btn-sm btn-warning">Buscar Mantenimiento Preventivo</button>
                     <div class="span12">&nbsp;</div>
 
