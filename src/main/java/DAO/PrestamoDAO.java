@@ -106,7 +106,7 @@ public class PrestamoDAO {
                 }
                 Prestamo registro = new Prestamo(id_prestamo, fecha_entrada, fecha_salida, tipo, activo1, activo2, activo3, activo4, activo5, id_solicitante, id_trabajador);
                 id_prestamo = rs.getInt("id_prestamo");
-                registro.setId_prestamo(id_prestamo);
+                registro.setId_prestamo(id_solicitante);
 
                 fecha_entrada = rs.getString("fecha_entrada");
                 registro.setFecha_entrada(fecha_entrada);
@@ -133,10 +133,10 @@ public class PrestamoDAO {
                 registro.setActivo5(activo5);
                 
                 id_solicitante = rs.getInt("id_solicitante");
-                registro.setId_solicitante(id_prestamo);
+                registro.setId_solicitante(id_solicitante);
                 
                 id_trabajador = rs.getInt("id_trabajador");
-                registro.setId_trabajador(id_prestamo);
+                registro.setId_trabajador(id_trabajador);
 
 
                 prestamo.add(registro);
@@ -183,7 +183,7 @@ public class PrestamoDAO {
                 Prestamo registro = new Prestamo(id_prestamo, fecha_entrada, fecha_salida, tipo, activo1, activo2, activo3, activo4, activo5, id_solicitante, id_trabajador);
               
                 id_prestamo = rs.getInt("id_prestamo");
-                registro.setId_prestamo(id_prestamo);
+                registro.setId_prestamo(id_solicitante);
 
                 fecha_entrada = rs.getString("fecha_entrada");
                 registro.setFecha_entrada(fecha_entrada);
@@ -210,10 +210,10 @@ public class PrestamoDAO {
                 registro.setActivo5(activo5);
                 
                 id_solicitante = rs.getInt("id_solicitante");
-                registro.setId_solicitante(id_prestamo);
+                registro.setId_solicitante(id_solicitante);
                 
                 id_trabajador = rs.getInt("id_trabajador");
-                registro.setId_trabajador(id_prestamo);
+                registro.setId_trabajador(id_trabajador);
 
 
                 prestamo.add(registro);
