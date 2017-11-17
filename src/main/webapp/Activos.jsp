@@ -57,7 +57,7 @@
                     <button onclick="window.location.href = 'ActivoCategoriaa?action=categoria'" type="button" type="button" class="btn-sm btn-success">Añadir Activo</button>
                     <button onclick="window.location.href = 'EliminarActivo?action=delete'" type="button" type="button" class="btn-sm btn-danger">Eliminar Activo</button>
                     <button onclick="window.location.href = 'BuscarActivo.jsp'" type="button" type="button" class="btn-sm btn-warning">Buscar Activo</button>
-                    <button onclick="window.location.href = 'NoPrestados.jsp'" type="button" type="button" class="btn-sm btn-info">Activos No Prestados</button>
+                    <button onclick="window.location.href = 'NoPrestadoss'" type="button" type="button" class="btn-sm btn-info">Activos No Prestados</button>
                     <div class="span12">&nbsp;</div>
 
 
