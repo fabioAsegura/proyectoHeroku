@@ -89,7 +89,7 @@
                                     <label for="activo4">Activo 4:</label>
                                     <input  class="form-control" name="activo4">
                                 </div>
-                                <br>
+                                <div class="span12">&nbsp;</div>
                                    <div class="form-group">
                                     <label for="activo5">Activo 5:</label>
                                     <input  class="form-control" name="activo5">
