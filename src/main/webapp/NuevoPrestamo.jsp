@@ -57,31 +57,52 @@
                     <div class="container">   
                         <form class="form-inline">
                             <div class="form-group">
-                                <label for="Idactivo">ID Activo:</label>
-                                <input class="form-control" id="Idactivo">
+                                <label for="fecha_entrada">Fecha Entrada:</label>
+                                <input class="form-control" id="id_entrada">
                             </div>
                             <div class="form-group">
-                                <label for="solicitante">ID Solicitante:</label>
-                                <input  class="form-control" id="solicitante">
+                                <label for="fecha_salida">Fecha Salida:</label>
+                                <input  class="form-control" id="id_solicitante">
                             </div>
-                            <div class="form-group">
-                                <label for="fechae">Fecha Entrada:</label>
-                                <input  class="form-control" id="fechae">
-                            </div>
-                            <div class="span12">&nbsp;</div>
-                            <div class="form-group">
-                                <label for="fechas">Fecha Salida:</label>
-                                <input  class="form-control" id="fechas">
-                                <div class="form-group">
+                          <div class="form-group">
                                     <label for="tipo">Tipo</label>
                                     <select class="form-control" id="tipo">
                                         <option>Interno</option>
                                         <option>Externo</option>
                                     </select>
                                 </div>
+                            <div class="span12">&nbsp;</div>
+                            <div class="form-group">
+                                <label for="activo1">Activo 1:</label>
+                                <input  class="form-control" id="activo1">
+                               
                                 <div class="form-group">
-                                    <label for="estado">ID Prestamo:</label>
-                                    <input  class="form-control" id="estado">
+                                    <label for="activo2">Activo 2:</label>
+                                    <input  class="form-control" id="activo2">
+                                </div>
+                                   <div class="form-group">
+                                    <label for="activo3">Activo 3:</label>
+                                    <input  class="form-control" id="activo3">
+                                </div>
+                                
+                                   <div class="form-group">
+                                    <label for="activo4">Activo 4:</label>
+                                    <input  class="form-control" id="activo4">
+                                </div>
+                                
+                                   <div class="form-group">
+                                    <label for="activo5">Activo 5:</label>
+                                    <input  class="form-control" id="activo5">
+                                </div>
+                                
+                                   <div class="form-group">
+                                    <label for="id_solicitante">Id Solicitante:</label>
+                                    <input  class="form-control" id="id_solicitante">
+                                </div>
+                                
+                                   <div class="form-group">
+                                    <label for="id_trabajador">Id Trabajador:</label>
+                                    <input  class="form-control" id="id_Trabajador">
                                 </div>
                                 <br>
                                 <div class="span12">&nbsp;</div>
