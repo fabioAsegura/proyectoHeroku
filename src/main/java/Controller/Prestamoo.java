@@ -71,7 +71,7 @@ public class Prestamoo extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            int id_prestamo = Integer.parseInt(request.getParameter("id_prestamo"));
+            int id_prestamo = Integer.parseInt(request.getParameter("id_solicitante"));
             String fecha_entrada = (String) request.getParameter("fecha_entrada");
             String fecha_salida = (String) request.getParameter("fecha_salida");
             String tipo = (String) request.getParameter("tipo");
