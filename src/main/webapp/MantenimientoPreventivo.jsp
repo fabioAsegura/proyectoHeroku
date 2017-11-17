@@ -44,8 +44,8 @@
         </style>
     </head>
     <body>
-    <%@include file="Header.jsp"%>
-        
+        <%@include file="Header.jsp"%>
+
 
         <div class="container-fluid text-center">    
             <div class="row content">
@@ -68,7 +68,7 @@
                                 <th>Tipo</th>
                                 <th>Descripcion</th>
                                 <th>Materiales</th>
-                                
+
                             </tr>
                             <% if (request.getAttribute("listaMantenimiento") != null) {
                                     ArrayList<Mantenimiento> list = (ArrayList<Mantenimiento>) request.getAttribute("listaMantenimiento");
@@ -82,10 +82,12 @@
                                 <td><%=mant.getTipo()%></td>
                                 <td><%=mant.getDescripcion()%></td>
                                 <td><%=mant.getMateriales()%></td>
-                              
+
 
                                 <td>
-                                    <button onclick="window.location.href = 'EditarMantenimientoPreventivos?id_activo=<%=mant.getId_activo()%>&tipo=<%=mant.getTipo()%>&descrpcion=<%=mant.getFabricante()%>&materiales=<%=mant.getFecha_compra()%>'" class="btn btn-info">Editar</button>
+
+                                    <%--   <button onclick="window.location.href = 'EditarMantenimientoPreventivos?id_activo=<%=mant.getId_activo()%>&tipo=<%=mant.getTipo()%>&descrpcion=<%=mant.getFabricante()%>&materiales=<%=mant.getFecha_compra()%>'" class="btn btn-info">Editar</button>
+                                    --%>
                                 </td>
                             </tr>
                             <% }
