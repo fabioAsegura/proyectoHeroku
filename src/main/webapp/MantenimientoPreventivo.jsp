@@ -54,7 +54,7 @@
                 <div class="col-sm-8 text-left"> 
                     <h1>Mantenimiento Preventivo</h1>
                     <div class="span12">&nbsp;</div>
-                    <form class="form-inline" action="MantenimientoPreventivos" method="GET">
+                    <form class="form-inline" action="AnadirMantenimientoPreventivos" method="GET">
                     <button onclick="window.location.href = 'AnadirMantenimientoPreventivo.jsp'" type="submit" class="btn-sm btn-success">Añadir Mantenimiento Preventivo</button>
                     </form>
                     <br>
