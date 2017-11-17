@@ -206,6 +206,14 @@
         <url-pattern>/EliminarCategoriaa</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>NoPrestadoss</servlet-name>
+        <servlet-class>Controller.NoPrestadoss</servlet-class>
+    </servlet>
+        <servlet-mapping>
+        <servlet-name>NoPrestadoss</servlet-name>
+        <url-pattern>/NoPrestadoss</url-pattern>
+    </servlet-mapping>
     
     
     <session-config>
