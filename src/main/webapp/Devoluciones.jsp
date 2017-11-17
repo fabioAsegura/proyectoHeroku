@@ -56,10 +56,6 @@
                     <div class="container">   
                         <form class="form-inline">
                             <div class="form-group">
-                                <label for="Idusuario">ID Activo:</label>
-                                <input class="form-control" id="Idusuario">
-                            </div>
-                            <div class="form-group">
                                 <label for="idequipo">ID Solicitante:</label>
                                 <input  class="form-control" id="idequipo">
                             </div>
