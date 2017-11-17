@@ -1,4 +1,8 @@
+<%@page import="Model.Categoria"%>
+<%@page import="java.util.ArrayList"%>
+
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <title>Editar Activo</title>
@@ -43,7 +47,8 @@
     </head>
     <body>
 
-        <%@include file="Header.jsp"%>
+         <%@include file="Header.jsp" %>
+
         <div class="container-fluid text-center">    
             <div class="row content">
                 <div class="col-sm-2 sidenav">
@@ -63,6 +68,7 @@
                             String estado = (String) request.getAttribute("estado");
                             String prestado = (String) request.getAttribute("prestado");
                             int calificacion = (Integer) request.getAttribute("calificacion");
+                            String categoria = (String) request.getAttribute("categoria");
 
                         %>
                         <form class="form-inline" action="EditarActivos" method="POST">
@@ -103,6 +109,13 @@
                                     <option>False</option>
                                 </select>
                             </div>
+                                    
+                                     <div class="form-group">
+                                <label for="categoria">Categoria:</label>
+                                <input  class="form-control" name="categoria" value="<%=categoria%>">
+                            </div>
+                                <br>
+                                <br>
                             <div class="form-group">
                                 <label for="tipo">Calificación</label>
                                 <select class="form-control" name="calificacion" value="<%=calificacion%>">

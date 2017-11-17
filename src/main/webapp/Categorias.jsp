@@ -1,9 +1,9 @@
-<%@page import="Model.Activo"%>
+<%@page import="Model.Categoria"%>
 <%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Activos</title>
+        <title>Categorias</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -28,6 +28,7 @@
 
             /* Set black background color, white text and some padding */
             footer {
+            
                 background-color: #555;
                 color: white;
                 padding: 15px;
@@ -45,18 +46,17 @@
     </head>
     <body>
 
-        <%@include file="Header.jsp" %>
+         <%@include file="Header.jsp" %>
 
         <div class="container-fluid text-center">    
             <div class="row content">
                 <div class="col-sm-2 sidenav">
                 </div>
                 <div class="col-sm-8 text-left"> 
-                    <h1>Activos</h1>
+                    <h1>Categorias</h1>
                     <div class="span12">&nbsp;</div>
-                    <button onclick="window.location.href = 'ActivoCategoriaa?action=categoria'" type="button" type="button" class="btn-sm btn-success">Añadir Activo</button>
-                    <button onclick="window.location.href = 'EliminarActivo?action=delete'" type="button" type="button" class="btn-sm btn-danger">Eliminar Activo</button>
-                    <button onclick="window.location.href = 'BuscarActivo.jsp'" type="button" type="button" class="btn-sm btn-warning">Buscar Activo</button>
+                    <button onclick="window.location.href = 'AnadirCategoria.jsp'" type="button" type="button" class="btn-sm btn-success">Añadir Categoria</button>
+                   
                     <div class="span12">&nbsp;</div>
 
 
@@ -64,36 +64,25 @@
                     <div class="container">           
                         <table class="table table-striped">
                             <tr>
-                                <th>ID Activo</th>
-                                <th>Tipo</th>
-                                <th>Fabricante</th>
-                                <th>Fecha compra</th>
-                                <th>Ultimo Mant.</th>
-                                <th>Estado</th>
-                                <th>Prestado</th>
-                                <th>Calificacion</th>
-                                <th>Categoria</th>
+                                <th>ID Categoria</th>
+                                <th>Nombre</th>
+                                <th>Ubicacion</th>
+                              
                             </tr>
-                            <% if (request.getAttribute("listaActivos") != null) {
-                                    ArrayList<Activo> list = (ArrayList<Activo>) request.getAttribute("listaActivos");
+                            <% if (request.getAttribute("listaCategorias") != null) {
+                                    ArrayList<Categoria> list = (ArrayList<Categoria>) request.getAttribute("listaCategorias");
                                     if (list != null)
-                                        for (Activo activo : list) {
+                                        for (Categoria categoria : list) {
 
 
                             %>
                             <tr>
-                                <td><%=activo.getId_activo()%></td>
-                                <td><%=activo.getTipo()%></td>
-                                <td><%=activo.getFabricante()%></td>
-                                <td><%=activo.getFecha_compra()%></td>
-                                <td><%=activo.getUltimo_mantenimiento()%></td>
-                                <td><%=activo.getEstado()%></td>
-                                <td><%=activo.getPrestado()%></td>
-                                <td><%=activo.getCalificacion()%></td>
-                                <td><%=activo.getCategoria()%></td>
-
+                                <td><%=categoria.getId()%></td>
+                                <td><%=categoria.getNombre()%></td>
+                                <td><%=categoria.getUbicacion()%></td>
+                               
                                 <td>
-                                    <button onclick="window.location.href = 'EditarActivos?id_activo=<%=activo.getId_activo()%>&tipo=<%=activo.getTipo()%>&fabricante=<%=activo.getFabricante()%>&fecha_compra=<%=activo.getFecha_compra()%>&ultimo_mantenimiento=<%=activo.getUltimo_mantenimiento()%>&estado=<%=activo.getEstado()%>&prestado=<%=activo.getPrestado()%>&calificacion=<%=activo.getCalificacion()%>&categoria=<%=activo.getCategoria()%>'" class="btn btn-info">Editar</button>
+                                    <button onclick="window.location.href = 'EliminarCategoriaa?id_categoria=<%=categoria.getId()%>'" class="btn btn-info">Eliminar</button>
                                 </td>
                             </tr>
                             <% }

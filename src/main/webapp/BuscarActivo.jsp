@@ -45,7 +45,7 @@
     </head>
     <body>
 
-       <%@include file="Header.jsp"%>
+          <%@include file="Header.jsp" %>
 
         <div class="container-fluid text-center">    
             <div class="row content">
@@ -81,6 +81,7 @@
                                 <th>Estado</th>
                                 <th>Prestado</th>
                                 <th>Calificacion</th>
+                                <th>Categoria</th>
                             </tr>
                             <% if (request.getAttribute("listaActivosBusqueda") != null) {
                                 ArrayList<Activo> list = (ArrayList<Activo>) request.getAttribute("listaActivosBusqueda");
@@ -98,6 +99,7 @@
                                 <td><%=activo.getEstado()%></td>
                                 <td><%=activo.getPrestado()%></td>
                                 <td><%=activo.getCalificacion()%></td>
+                                <td><%=activo.getCategoria()%></td>
 
                                 <td>
                                 </td>

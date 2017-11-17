@@ -32,7 +32,7 @@ public class ActivoDAO {
     public boolean addActivo(Activo activo) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
-        String query = "insert into activo (id_activo,tipo,fabricante,fecha_compra,ultimo_mantenimiento,estado,prestado,calificacion) values (?,?,?,?,?,?,?,? );";
+        String query = "insert into activo (id_activo,tipo,fabricante,fecha_compra,ultimo_mantenimiento,estado,prestado,calificacion,categoria) values (?,?,?,?,?,?,?,?,? );";
         PreparedStatement preparedStmt = null;
         try {
             preparedStmt = connection.prepareStatement(query);
@@ -44,7 +44,7 @@ public class ActivoDAO {
             preparedStmt.setString(6, activo.getEstado());
             preparedStmt.setString(7, activo.getPrestado());
             preparedStmt.setInt(8, activo.getCalificacion());
-
+            preparedStmt.setString(9, activo.getCategoria());
             result = preparedStmt.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -86,11 +86,12 @@ public class ActivoDAO {
             String estado = null;
             String prestado = null;
             int calificacion = 0;
+            String categoria = null;
             while (rs.next()) {
                 if (activo == null) {
                     activo = new ArrayList<Activo>();
                 }
-                Activo registro = new Activo(id, tipo, fabricante, fecha_compra, ultimo_mantenimiento, estado, prestado, calificacion);
+                Activo registro = new Activo(id, tipo, fabricante, fecha_compra, ultimo_mantenimiento, estado, prestado, calificacion, categoria);
                 id = rs.getInt("id_activo");
                 registro.setId_activo(id);
 
@@ -111,7 +112,10 @@ public class ActivoDAO {
 
                 prestado = rs.getString("prestado");
                 registro.setPrestado(prestado);
-
+                
+                categoria = rs.getString("categoria");
+                registro.setCategoria(categoria);
+                
                 calificacion = rs.getInt("calificacion");
                 registro.setCalificacion(calificacion);
 
@@ -152,11 +156,12 @@ public class ActivoDAO {
             String estado = null;
             String prestado = null;
             int calificacion = 0;
+            String categoria = null;
             while (rs.next()) {
                 if (activo == null) {
                     activo = new ArrayList<Activo>();
                 }
-                Activo registro = new Activo(id, tipo, fabricante, fecha_compra, ultimo_mantenimiento, estado, prestado, calificacion);
+                Activo registro = new Activo(id, tipo, fabricante, fecha_compra, ultimo_mantenimiento, estado, prestado, calificacion, categoria);
                 id = rs.getInt("id_activo");
                 registro.setId_activo(id);
 
@@ -181,6 +186,9 @@ public class ActivoDAO {
                 calificacion = rs.getInt("calificacion");
                 registro.setCalificacion(calificacion);
 
+                categoria = rs.getString("categoria");
+                registro.setCategoria(categoria);
+
                 activo.add(registro);
 
             }
@@ -200,10 +208,10 @@ public class ActivoDAO {
 
     }
 
-    public boolean updateActivo(int a, String tipo, String fabricante, String fecha_compra, String ultimo_mantenimiento, String estado, String prestado, int calificacion) throws SQLException, URISyntaxException {
+    public boolean updateActivo(int a, String tipo, String fabricante, String fecha_compra, String ultimo_mantenimiento, String estado, String prestado, int calificacion, String categoria) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
-        String query = "update activo set tipo = ?, fabricante = ?, fecha_compra = ?, ultimo_mantenimiento = ?, estado = ?, prestado = ?, calificacion = ? where id_activo = " + a;
+        String query = "update activo set tipo = ?, fabricante = ?, fecha_compra = ?, ultimo_mantenimiento = ?, estado = ?, prestado = ?, categoria = ?, calificacion = ? where id_activo = " + a;
         PreparedStatement preparedStmt = null;
 
         try {
@@ -214,7 +222,8 @@ public class ActivoDAO {
             preparedStmt.setString(4, ultimo_mantenimiento);
             preparedStmt.setString(5, estado);
             preparedStmt.setString(6, prestado);
-            preparedStmt.setInt(7, calificacion);
+            preparedStmt.setString(7, categoria);
+            preparedStmt.setInt(8, calificacion);
 
             if (preparedStmt.executeUpdate() > 0) {
                 result = true;

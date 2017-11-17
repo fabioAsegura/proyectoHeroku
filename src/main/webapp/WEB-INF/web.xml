@@ -176,6 +176,38 @@
         <servlet-name>EditarPrestamos</servlet-name>
         <url-pattern>/EditarPrestamos</url-pattern>
     </servlet-mapping>
+    
+    
+     <servlet>
+        <servlet-name>Categoriaa</servlet-name>
+        <servlet-class>Controller.Categoriaa</servlet-class>
+    </servlet>
+        <servlet-mapping>
+        <servlet-name>Categoriaa</servlet-name>
+        <url-pattern>/Categoriaa</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ActivoCategoriaa</servlet-name>
+        <servlet-class>Controller.ActivoCategoriaa</servlet-class>
+    </servlet>
+        <servlet-mapping>
+        <servlet-name>ActivoCategoriaa</servlet-name>
+        <url-pattern>/ActivoCategoriaa</url-pattern>
+    </servlet-mapping>
+    
+    
+     <servlet>
+        <servlet-name>EliminarCategoriaa</servlet-name>
+        <servlet-class>Controller.EliminarCategoriaa</servlet-class>
+    </servlet>
+        <servlet-mapping>
+        <servlet-name>EliminarCategoriaa</servlet-name>
+        <url-pattern>/EliminarCategoriaa</url-pattern>
+    </servlet-mapping>
+    
+    
+    
     <session-config>
         <session-timeout>
             30
