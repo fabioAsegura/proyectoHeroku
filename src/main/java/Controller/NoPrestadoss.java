@@ -50,7 +50,7 @@ public class NoPrestadoss extends HttpServlet {
             throws ServletException, IOException {
         try {
             ActivoDAO obj = new ActivoDAO();
-            ArrayList<Activo> lista = (ArrayList<Activo>) obj.getAllActivo();
+            ArrayList<Activo> lista = (ArrayList<Activo>) obj.getActivoNoPrestados();
 
             request.setAttribute("listaNoPrestados", lista);
 
