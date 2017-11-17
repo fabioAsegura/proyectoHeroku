@@ -55,7 +55,7 @@
                     <p></p>
                     <hr>
                     <div class="container">   
-                        <form class="form-inline">
+                        <form class="form-inline" action="Prestamoo" method="POST">
                             <div class="form-group">
                                 <label for="fecha_entrada">Fecha Entrada:</label>
                                 <input class="form-control" id="id_entrada">
