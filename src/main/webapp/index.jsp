@@ -56,7 +56,7 @@
                     <hr>
 
                     <div class="btn-group">
-                        <button onclick="window.location.href = 'Prestamos.jsp'" type="button" class="btn-lg btn-default"> Nuevo Prestamo</button>
+                        <button onclick="window.location.href = 'Prestamoo'" type="button" class="btn-lg btn-default"> Nuevo Prestamo</button>
                         <button onclick="window.location.href = 'Devoluciones.jsp'" type="button" class="btn-lg btn-default">Devoluciones</button>
                     </div>
 

@@ -84,7 +84,7 @@
                                     <label for="activo3">Activo 3:</label>
                                     <input  class="form-control" name="activo3">
                                 </div>
-                                
+                                <br>
                                    <div class="form-group">
                                     <label for="activo4">Activo 4:</label>
                                     <input  class="form-control" name="activo4">
