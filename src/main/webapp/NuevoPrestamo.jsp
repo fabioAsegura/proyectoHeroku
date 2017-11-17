@@ -89,19 +89,19 @@
                                     <label for="activo4">Activo 4:</label>
                                     <input  class="form-control" id="activo4">
                                 </div>
-                                
+                                <br>
                                    <div class="form-group">
                                     <label for="activo5">Activo 5:</label>
                                     <input  class="form-control" id="activo5">
                                 </div>
-                                
+                                 <br>
                                    <div class="form-group">
-                                    <label for="id_solicitante">Id Solicitante:</label>
+                                    <label for="id_solicitante">ID Solicitante:</label>
                                     <input  class="form-control" id="id_solicitante">
                                 </div>
-                                
+                                 <br>
                                    <div class="form-group">
-                                    <label for="id_trabajador">Id Trabajador:</label>
+                                    <label for="id_trabajador">ID Trabajador:</label>
                                     <input  class="form-control" id="id_Trabajador">
                                 </div>
                                 <br>
