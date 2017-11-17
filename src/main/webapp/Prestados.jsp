@@ -53,7 +53,7 @@
 
                 </div>
                 <div class="col-sm-8 text-left"> 
-                    <h1>Activos No Prestados</h1>
+                    <h1>Activos Prestados</h1>
                     <p></p>
                     <hr>
                
