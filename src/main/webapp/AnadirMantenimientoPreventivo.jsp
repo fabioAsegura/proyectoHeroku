@@ -58,7 +58,7 @@
                    
                     
                     <div class="container">   
-                        <form class="form-inline" action="AnadirMantenimientoPreventivos" method="POST">
+                        <form class="form-inline" action="MantenimientoPreventivos" method="POST">
                             <div class="form-group">
                                 <label for="tipo">ID Activo:</label>
                                 <select class="form-control" name="idActivo">
