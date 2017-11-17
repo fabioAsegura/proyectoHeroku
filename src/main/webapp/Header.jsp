@@ -17,7 +17,7 @@
                         <li><a href="Solicitantee">Solicitante</a></li>
                         <li><a href="Auxiliarr">Auxiliar</a></li>
                         <li><a href="Supervisorr">Supervisor</a></li>
-                        <li><a href="MantenimientoPreventivo.jsp">Mantenimiento Preventivo</a></li>
+                        <li><a href="MantenimientoPreventivos">Mantenimiento Preventivo</a></li>
                     </ul>
 
                 </div>
