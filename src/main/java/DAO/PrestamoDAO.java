@@ -105,8 +105,8 @@ public class PrestamoDAO {
                     prestamo = new ArrayList<Prestamo>();
                 }
                 Prestamo registro = new Prestamo(id_prestamo, fecha_entrada, fecha_salida, tipo, activo1, activo2, activo3, activo4, activo5, id_solicitante, id_trabajador);
-                id_prestamo = rs.getInt("id_prestamo");
-                registro.setId_prestamo(id_solicitante);
+                id_prestamo = rs.getInt("id_solicitante");
+                registro.setId_prestamo(id_prestamo);
 
                 fecha_entrada = rs.getString("fecha_entrada");
                 registro.setFecha_entrada(fecha_entrada);
@@ -182,8 +182,7 @@ public class PrestamoDAO {
                 }
                 Prestamo registro = new Prestamo(id_prestamo, fecha_entrada, fecha_salida, tipo, activo1, activo2, activo3, activo4, activo5, id_solicitante, id_trabajador);
               
-                id_prestamo = rs.getInt("id_prestamo");
-                registro.setId_prestamo(id_solicitante);
+                
 
                 fecha_entrada = rs.getString("fecha_entrada");
                 registro.setFecha_entrada(fecha_entrada);
@@ -215,6 +214,8 @@ public class PrestamoDAO {
                 id_trabajador = rs.getInt("id_trabajador");
                 registro.setId_trabajador(id_trabajador);
 
+                id_prestamo = rs.getInt("id_solicitante");
+                registro.setId_prestamo(id_prestamo);
 
                 prestamo.add(registro);
 
