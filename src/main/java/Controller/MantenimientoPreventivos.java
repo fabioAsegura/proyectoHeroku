@@ -55,7 +55,7 @@ public class MantenimientoPreventivos extends HttpServlet {
 
             ArrayList<Mantenimiento> lista = (ArrayList<Mantenimiento>) obj.getAllMantenimiento();
 
-            request.setAttribute("listaMantenimientos", lista);
+            request.setAttribute("listaMantenimiento", lista);
 
             request.getRequestDispatcher("MantenimientoPreventivo.jsp").forward(request, response);
            
