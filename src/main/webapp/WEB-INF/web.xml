@@ -206,6 +206,15 @@
         <url-pattern>/EliminarPrestamo</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>BuscarPrestamo</servlet-name>
+        <servlet-class>Controller.BuscarPrestamo</servlet-class>
+    </servlet>
+        <servlet-mapping>
+        <servlet-name>BuscarPrestamo</servlet-name>
+        <url-pattern>/BuscarPrestamo</url-pattern>
+    </servlet-mapping>
+    
     
      <servlet>
         <servlet-name>Prestamoo</servlet-name>
