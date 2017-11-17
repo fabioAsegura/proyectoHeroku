@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Activos</title>
+        <title>Buscar Activo</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -45,23 +45,19 @@
     </head>
     <body>
 
-        <%@include file="Header.jsp" %>
+          <%@include file="Header.jsp" %>
 
         <div class="container-fluid text-center">    
             <div class="row content">
                 <div class="col-sm-2 sidenav">
+
                 </div>
                 <div class="col-sm-8 text-left"> 
-                    <h1>Activos</h1>
+                    <h1>Activos No Prestados</h1>
+                    <p></p>
+                    <hr>
+               
                     <div class="span12">&nbsp;</div>
-                    <button onclick="window.location.href = 'ActivoCategoriaa?action=categoria'" type="button" type="button" class="btn-sm btn-success">Añadir Activo</button>
-                    <button onclick="window.location.href = 'EliminarActivo?action=delete'" type="button" type="button" class="btn-sm btn-danger">Eliminar Activo</button>
-                    <button onclick="window.location.href = 'BuscarActivo.jsp'" type="button" type="button" class="btn-sm btn-warning">Buscar Activo</button>
-                    <button onclick="window.location.href = 'NoPrestados.jsp'" type="button" type="button" class="btn-sm btn-info">Activos No Prestados</button>
-                    <div class="span12">&nbsp;</div>
-
-
-
                     <div class="container">           
                         <table class="table table-striped">
                             <tr>
@@ -75,10 +71,10 @@
                                 <th>Calificacion</th>
                                 <th>Categoria</th>
                             </tr>
-                            <% if (request.getAttribute("listaActivos") != null) {
-                                    ArrayList<Activo> list = (ArrayList<Activo>) request.getAttribute("listaActivos");
-                                    if (list != null)
-                                        for (Activo activo : list) {
+                            <% if (request.getAttribute("listaNoPrestados") != null) {
+                                ArrayList<Activo> list = (ArrayList<Activo>) request.getAttribute("listaNoPrestados");
+                                if (list != null)
+                                    for (Activo activo : list) {
 
 
                             %>
@@ -94,7 +90,6 @@
                                 <td><%=activo.getCategoria()%></td>
 
                                 <td>
-                                    <button onclick="window.location.href = 'EditarActivos?id_activo=<%=activo.getId_activo()%>&tipo=<%=activo.getTipo()%>&fabricante=<%=activo.getFabricante()%>&fecha_compra=<%=activo.getFecha_compra()%>&ultimo_mantenimiento=<%=activo.getUltimo_mantenimiento()%>&estado=<%=activo.getEstado()%>&prestado=<%=activo.getPrestado()%>&calificacion=<%=activo.getCalificacion()%>&categoria=<%=activo.getCategoria()%>'" class="btn btn-info">Editar</button>
                                 </td>
                             </tr>
                             <% }
@@ -102,8 +97,6 @@
                             %>
                         </table>
                     </div>
-                    <hr>
-
                 </div>
 
             </div>
