@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Mantenimiento Preventivo</title>
+        <title>Buscar Mantenimiento Preventivo</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -44,26 +44,32 @@
         </style>
     </head>
     <body>
-        <%@include file="Header.jsp"%>
 
+       <%@include file="Header.jsp"%>
 
         <div class="container-fluid text-center">    
             <div class="row content">
                 <div class="col-sm-2 sidenav">
+
                 </div>
                 <div class="col-sm-8 text-left"> 
-                    <h1>Mantenimiento Preventivo</h1>
+                    <h1>Buscar Mantenimiento Preventivo</h1>
+                    <p></p>
+                    <hr>
+                    <div class="container">   
+                        <form class="form-inline" action="BuscarMantenimientoPreventivos" method="GET">
+
+                            <div class="form-group">
+                                <label for="idequipo">ID Activo:</label>
+                                <input  class="form-control" name="idActivo">
+                            </div>
+
+                            <br>
+                            <div class="span12">&nbsp;</div>
+                            <button type="submit" class="btn btn-default">Enviar</button>
+                        </form>
+                    </div>
                     <div class="span12">&nbsp;</div>
-                    <form class="form-inline" action="MantenimientoPreventivos" method="GET">
-                    <button onclick="window.location.href = 'AnadirMantenimientoPreventivo.jsp'" type="submit" class="btn-sm btn-success">Añadir Mantenimiento Preventivo</button>
-                    </form>
-                    <br>
-                    <button onclick="window.location.href = 'EliminarMantenimientoPreventivos?action=delete'" type="button" type="button" class="btn-sm btn-danger">Eliminar Mantenimiento Preventivo</button>
-                    <button onclick="window.location.href = 'BuscarMantenimientoPreventivo.jsp'" type="button" type="button" class="btn-sm btn-warning">Buscar Mantenimiento Preventivo</button>
-                    <div class="span12">&nbsp;</div>
-
-
-
                     <div class="container">           
                         <table class="table table-striped">
                             <tr>
@@ -71,26 +77,23 @@
                                 <th>Tipo</th>
                                 <th>Descripcion</th>
                                 <th>Materiales</th>
-
+                                
                             </tr>
-                            <% if (request.getAttribute("listaMantenimiento") != null) {
-                                    ArrayList<Mantenimiento> list = (ArrayList<Mantenimiento>) request.getAttribute("listaMantenimiento");
-                                    if (list != null)
-                                        for (Mantenimiento mant : list) {
+                            <% if (request.getAttribute("listaMantenimientoBusqueda") != null) {
+                                ArrayList<Mantenimiento> list = (ArrayList<Mantenimiento>) request.getAttribute("listaMantenimientoBusqueda");
+                                if (list != null)
+                                    for (Mantenimiento activo : list) {
 
 
                             %>
                             <tr>
-                                <td><%=mant.getId_activo()%></td>
-                                <td><%=mant.getTipo()%></td>
-                                <td><%=mant.getDescripcion()%></td>
-                                <td><%=mant.getMateriales()%></td>
-
+                                <td><%=activo.getId_activo()%></td>
+                                <td><%=activo.getTipo()%></td>
+                                <td><%=activo.getDescripcion()%></td>
+                                <td><%=activo.getMateriales()%></td>
+                               
 
                                 <td>
-
-                                    <button onclick="window.location.href = 'EditarMantenimientoPreventivos?id_activo=<%=mant.getId_activo()%>&tipo=<%=mant.getTipo()%>&descrpcion=<%=mant.getFabricante()%>&materiales=<%=mant.getFecha_compra()%>'" class="btn btn-info">Editar</button>
-                                   
                                 </td>
                             </tr>
                             <% }
@@ -98,8 +101,6 @@
                             %>
                         </table>
                     </div>
-                    <hr>
-
                 </div>
 
             </div>
