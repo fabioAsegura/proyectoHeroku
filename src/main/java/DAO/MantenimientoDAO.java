@@ -172,7 +172,7 @@ public class MantenimientoDAO {
     public boolean updateMantenimiento(int a, String tipo, String descripcion, String materiales) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
-        String query = "update activo set descripcion = ?, materiales = ? where id_activo = " + a;
+        String query = "update mantenimiento set descripcion = ?, materiales = ? where id_activo = " + a;
         PreparedStatement preparedStmt = null;
 
         try {
