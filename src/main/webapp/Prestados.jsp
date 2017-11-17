@@ -56,7 +56,8 @@
                     <h1>Activos Prestados</h1>
                     <p></p>
                     <hr>
-               
+                    <button onclick="window.location.href = 'Activoo'" type="button" type="button" class="btn-sm btn-warning">Volver</button>
+
                     <div class="span12">&nbsp;</div>
                     <div class="container">           
                         <table class="table table-striped">

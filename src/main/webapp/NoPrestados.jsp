@@ -45,7 +45,7 @@
     </head>
     <body>
 
-          <%@include file="Header.jsp" %>
+        <%@include file="Header.jsp" %>
 
         <div class="container-fluid text-center">    
             <div class="row content">
@@ -56,7 +56,8 @@
                     <h1>Activos No Prestados</h1>
                     <p></p>
                     <hr>
-               
+                    <button onclick="window.location.href = 'Activoo'" type="button" type="button" class="btn-sm btn-warning">Volver</button>
+
                     <div class="span12">&nbsp;</div>
                     <div class="container">           
                         <table class="table table-striped">
