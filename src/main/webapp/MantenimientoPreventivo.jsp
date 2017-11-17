@@ -1,5 +1,4 @@
-<%@page import="Model.Activo"%>
-<%@page import="Model.Trabajador"%>
+<%@page import="Model.Mantenimiento"%>
 <%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,64 +44,57 @@
         </style>
     </head>
     <body>
-
-        <%@include file="Header.jsp"%>
+    <%@include file="Header.jsp"%>
+        
 
         <div class="container-fluid text-center">    
             <div class="row content">
                 <div class="col-sm-2 sidenav">
-
                 </div>
                 <div class="col-sm-8 text-left"> 
                     <h1>Mantenimiento Preventivo</h1>
-                   
-                    
-                    <div class="container">   
-                        <form class="form-inline" action="MantenimientoPreventivos" method="POST">
-                            <div class="form-group">
-                                <label for="tipo">ID Activo:</label>
-                                <select class="form-control" name="mantenimientoP">
-                                    <%
-                                        if (request.getAttribute("activos") != null) {
-                                            ArrayList<Activo> array = (ArrayList<Activo>) request.getAttribute("activos");
-                                            for (Activo a : array) {
-                                    %> 
-                                    <option value="<%=a.getId_activo()%>"><%=a.getId_activo()%></option> 
-                                    <%      }
-                                        }
-                                    %> 
-                                </select>   
-                                <br> 
+                    <div class="span12">&nbsp;</div>
+                    <button onclick="window.location.href = 'AnadirMantenimientoPreventivo.jsp'" type="button" type="button" class="btn-sm btn-success">Añadir Mantenimiento Preventivo</button>
+                    <button onclick="window.location.href = 'EliminarMantenimientoPreventivos?action=delete'" type="button" type="button" class="btn-sm btn-danger">Eliminar Mantenimiento Preventivo</button>
+                    <button onclick="window.location.href = 'BuscarMantenimientoPreventivo.jsp'" type="button" type="button" class="btn-sm btn-warning">Buscar Mantenimiento Preventivo</button>
+                    <div class="span12">&nbsp;</div>
 
-                            </div>
-        
-                            <button type="submit" class="btn btn-default" name="Enviar">Enviar</button>
-                        </form>
-                                <br>
-                                <br>
-                                <form class="form-inline" action="" method="POST">
-                            <div class="form-group">
-                                <label for="idequipo">ID Activo:</label>
-                                <input  class="form-control" name="idActivo">
-                            </div>
-                            <div class="form-group">
-                                <label for="nombre">Nombre Activo:</label>
-                                <input  class="form-control" name="nombre">
-                            </div>
-                            <div class="form-group">
-                                <label for="calificacion">Descripcion:</label>
-                                <input  class="form-control" name="descripcion">
-                            </div>
-                            <div class="span12">&nbsp;</div>
-                            <div class="form-group">
-                                <label for="fechaC">Materiales:</label>
-                                <input  class="form-control" name="materiales">
-                            </div>
-                        
-        
-                            <button type="submit" class="btn btn-default" name="Enviar">Enviar</button>
-                        </form>
+
+
+                    <div class="container">           
+                        <table class="table table-striped">
+                            <tr>
+                                <th>ID Activo</th>
+                                <th>Tipo</th>
+                                <th>Descripcion</th>
+                                <th>Materiales</th>
+                                
+                            </tr>
+                            <% if (request.getAttribute("listaMantenimiento") != null) {
+                                    ArrayList<Mantenimiento> list = (ArrayList<Mantenimiento>) request.getAttribute("listaMantenimiento");
+                                    if (list != null)
+                                        for (Mantenimiento mant : list) {
+
+
+                            %>
+                            <tr>
+                                <td><%=mant.getId_activo()%></td>
+                                <td><%=mant.getTipo()%></td>
+                                <td><%=mant.getDescripcion()%></td>
+                                <td><%=mant.getMateriales()%></td>
+                              
+
+                                <td>
+                                    <button onclick="window.location.href = 'EditarMantenimientoPreventivos?id_activo=<%=mant.getId_activo()%>&tipo=<%=mant.getTipo()%>&descrpcion=<%=mant.getFabricante()%>&materiales=<%=mant.getFecha_compra()%>'" class="btn btn-info">Editar</button>
+                                </td>
+                            </tr>
+                            <% }
+                                }
+                            %>
+                        </table>
                     </div>
+                    <hr>
+
                 </div>
 
             </div>
