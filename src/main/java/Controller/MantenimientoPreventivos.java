@@ -5,8 +5,9 @@
  */
 package Controller;
 
-import DAO.ActivoDAO;
+import DAO.MantenimientoDAO;
 import Model.Activo;
+import Model.Mantenimiento;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URISyntaxException;
@@ -50,13 +51,13 @@ public class MantenimientoPreventivos extends HttpServlet {
             throws ServletException, IOException {
        
         try {
-            ActivoDAO obj = new ActivoDAO();
+            MantenimientoDAO obj = new MantenimientoDAO();
 
-            ArrayList<Activo> lista = (ArrayList<Activo>) obj.getAllActivo();
+            ArrayList<Mantenimiento> lista = (ArrayList<Mantenimiento>) obj.getAllMantenimiento();
 
-            request.setAttribute("listaActivos", lista);
+            request.setAttribute("listaMantenimientos", lista);
 
-            request.getRequestDispatcher("Activos.jsp").forward(request, response);
+            request.getRequestDispatcher("MantenimientoPreventivo.jsp").forward(request, response);
            
 
         } catch (SQLException ex) {
@@ -73,19 +74,15 @@ public class MantenimientoPreventivos extends HttpServlet {
         try {
             int id_activo = Integer.parseInt(request.getParameter("idActivo"));
             String tipo = (String) request.getParameter("tipo");
-            String fabricante = (String) request.getParameter("fabricante");
-            String fecha_compra = (String) request.getParameter("fechaC");
-            String mantenimiento = (String) request.getParameter("mantenimiento");
-            String estado = (String) request.getParameter("estado");
-            String prestado = (String) request.getParameter("prestado");
-            int calificacion = Integer.parseInt(request.getParameter("calificacion"));
+            String descripcion = (String) request.getParameter("descripcion");
+            String materiales = (String) request.getParameter("materiales");
+           
+            MantenimientoDAO dao = new MantenimientoDAO();
+            Mantenimiento tab = new Mantenimiento(id_activo, tipo, descripcion, materiales);
 
-            ActivoDAO dao = new ActivoDAO();
-            Activo tab = new Activo(id_activo, tipo, fabricante, fecha_compra, mantenimiento, estado, prestado, calificacion);
+            dao.addMantenimiento(tab);
 
-            dao.addActivo(tab);
-
-            response.sendRedirect("Activoo");
+            response.sendRedirect("MantenimientoPreventivos");
 
         } catch (SQLException ex) {
             Logger.getLogger(MantenimientoPreventivos.class.getName()).log(Level.SEVERE, null, ex);

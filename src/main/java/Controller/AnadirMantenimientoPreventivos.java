@@ -75,17 +75,28 @@ public class AnadirMantenimientoPreventivos extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        int idA = Integer.parseInt(request.getParameter("eliminarActivo"));
         try {
-            ActivoDAO a = new ActivoDAO();
-            a.deleteActivo(idA);
-        } catch (SQLException ex) {
-            Logger.getLogger(AnadirMantenimientoPreventivos.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (URISyntaxException ex) {
-            Logger.getLogger(AnadirMantenimientoPreventivos.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            int id_activo = Integer.parseInt(request.getParameter("idActivo"));
+            String tipo = (String) request.getParameter("tipo");
+            String fabricante = (String) request.getParameter("fabricante");
+            String fecha_compra = (String) request.getParameter("fechaC");
+            String mantenimiento = (String) request.getParameter("mantenimiento");
+            String estado = (String) request.getParameter("estado");
+            String prestado = (String) request.getParameter("prestado");
+            int calificacion = Integer.parseInt(request.getParameter("calificacion"));
 
-        response.sendRedirect("Activoo");
+            ActivoDAO dao = new ActivoDAO();
+            Activo tab = new Activo(id_activo, tipo, fabricante, fecha_compra, mantenimiento, estado, prestado, calificacion);
+
+            dao.addActivo(tab);
+
+            response.sendRedirect("MantenimientoPreventivo");
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Activoo.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(Activoo.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
