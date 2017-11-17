@@ -61,7 +61,7 @@
                         <form class="form-inline" action="MantenimientoPreventivos" method="POST">
                             <div class="form-group">
                                 <label for="tipo">ID Activo:</label>
-                                <select class="form-control" name="mantenimientoP">
+                                <select class="form-control" name="idActivo">
                                     <%
                                         if (request.getAttribute("activos") != null) {
                                             ArrayList<Activo> array = (ArrayList<Activo>) request.getAttribute("activos");
@@ -75,9 +75,21 @@
                                 <br> 
 
                             </div>
-                            <div class="form-group">
-                                <label for="nombre">Tipo:</label>
-                                <input  class="form-control" name="tipo" value="<%=a.getTipo()%>" readonly="readonly">
+                             <div class="form-group">
+                                <label for="tipo">Tipo:</label>
+                                <select class="form-control" name="tipo">
+                                    <%
+                                        if (request.getAttribute("activos") != null) {
+                                            ArrayList<Activo> array = (ArrayList<Activo>) request.getAttribute("activos");
+                                            for (Activo a : array) {
+                                    %> 
+                                    <option value="<%=a.getTipo()%>"><%=a.getTipo()%></option> 
+                                    <%      }
+                                        }
+                                    %> 
+                                </select>   
+                                <br> 
+
                             </div>
                             <div class="form-group">
                                 <label for="calificacion">Descripcion:</label>
