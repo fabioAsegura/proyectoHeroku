@@ -1,3 +1,6 @@
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -31,21 +34,25 @@ public class PrestamoDAO {
     public boolean addPrestamo(Prestamo prestamo) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
-        String query = "insert into prestamo (id_prestamo,id_solicitante,id_trabajador,activo,tipo,fecha_entrada,fecha_salida) values (?,?,?,?,?,?,?);";
+        String query = "insert into prestamo (id_prestamo,fecha_entrada,fecha_salida,tipo,activo1,activo2,activo3,activo4,activo5,id_solicitante,id_trabajador) values (?,?,?,?,?,?,?,?,?,?,?);";
         PreparedStatement preparedStmt = null;
         try {
-            ArrayList<Integer> activos = prestamo.getActivo();
-            for (int i = 0; i < activos.size(); i++) {
+       
                 preparedStmt = connection.prepareStatement(query);
                 preparedStmt.setInt(1, prestamo.getId_prestamo());
-                preparedStmt.setInt(2, prestamo.getId_solicitante());
-                preparedStmt.setInt(3, prestamo.getId_trabajador());
-                preparedStmt.setInt(4, activos.get(i)); //OJO
-                preparedStmt.setString(5, prestamo.getTipo());
-                preparedStmt.setString(6, prestamo.getFechaEntrada());
-                preparedStmt.setString(7, prestamo.getFechaSalida());
+                preparedStmt.setString(2, prestamo.getFecha_entrada());
+                preparedStmt.setString(3, prestamo.getFecha_salida());
+                preparedStmt.setString(4, prestamo.getTipo());
+                preparedStmt.setString(5, prestamo.getActivo1());
+                preparedStmt.setString(6, prestamo.getActivo2());
+                preparedStmt.setString(7, prestamo.getActivo3());
+                preparedStmt.setString(8, prestamo.getActivo4());
+                preparedStmt.setString(9, prestamo.getActivo5());
+                preparedStmt.setInt(10, prestamo.getId_solicitante()); 
+                preparedStmt.setInt(11, prestamo.getId_trabajador());
+                
                 result = preparedStmt.execute();
-            }
+            
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -79,45 +86,58 @@ public class PrestamoDAO {
             Statement st = connection.createStatement();
             ResultSet rs = st.executeQuery(query);
 
-            int id_prestamo = 0;
-            int id_solicitante = 0;
-            int id_trabajador = 0;
-            ArrayList<Integer> activo = new ArrayList<Integer>();
-            String tipo = null;
-            String fechaEntrada = null;
-            String fechaSalida = null;
+           
+            int id_prestamo=0;
+            String fecha_entrada=null;
+            String fecha_salida=null;
+            String tipo=null;
+            String activo1=null;
+            String activo2=null;
+            String activo3=null;
+            String activo4=null;
+            String activo5=null;
+            int id_solicitante=0;
+            int id_trabajador=0;
+            
+            
             while (rs.next()) {
                 if (prestamo == null) {
                     prestamo = new ArrayList<Prestamo>();
                 }
-                Prestamo registro = new Prestamo(id_prestamo, id_solicitante, id_trabajador, activo, tipo, fechaEntrada, fechaSalida);
+                Prestamo registro = new Prestamo(id_prestamo, fecha_entrada, fecha_salida, tipo, activo1, activo2, activo3, activo4, activo5, id_solicitante, id_trabajador);
                 id_prestamo = rs.getInt("id_prestamo");
                 registro.setId_prestamo(id_prestamo);
 
-                id_solicitante = rs.getInt("id_solicitante");
-                registro.setId_prestamo(id_solicitante);
-
-                id_trabajador = rs.getInt("id_trabajador");
-                registro.setId_prestamo(id_trabajador);
-
-                String queryActivo = "SELECT id_activo FROM prestamo where id_prestamo = " + id_prestamo;
-                ResultSet rsActivo = st.executeQuery(queryActivo);
-
-                while (rsActivo.next()) {
-                    int idActivo = rsActivo.getInt("id_activo");
-                    activo.add(idActivo);
-                }
-
-                registro.setActivo(activo);
+                fecha_entrada = rs.getString("fecha_entrada");
+                registro.setFecha_entrada(fecha_entrada);
+                
+                fecha_salida = rs.getString("fecha_salida");
+                registro.setFecha_salida(fecha_salida);
 
                 tipo = rs.getString("tipo");
                 registro.setTipo(tipo);
+                
+                activo1 = rs.getString("activo1");
+                registro.setActivo1(activo1);
 
-                fechaEntrada = rs.getString("fecha_entrada");
-                registro.setFechaEntrada(fechaEntrada);
+                activo2 = rs.getString("activo2");
+                registro.setActivo2(activo2);
+                
+                activo3 = rs.getString("activo3");
+                registro.setActivo3(activo3);
+                
+                activo4 = rs.getString("activo4");
+                registro.setActivo4(activo4);
+                
+                activo5 = rs.getString("activo5");
+                registro.setActivo5(activo5);
+                
+                id_solicitante = rs.getInt("id_solicitante");
+                registro.setId_solicitante(id_prestamo);
+                
+                id_trabajador = rs.getInt("id_trabajador");
+                registro.setId_trabajador(id_prestamo);
 
-                fechaSalida = rs.getString("fecha_salida");
-                registro.setFechaEntrada(fechaSalida);
 
                 prestamo.add(registro);
 
@@ -134,3 +154,4 @@ public class PrestamoDAO {
 
     }
 }
+
