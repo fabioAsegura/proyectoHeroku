@@ -89,7 +89,7 @@
 
                                 <td>
 
-                                    <button onclick="window.location.href = 'EditarMantenimientoPreventivos?id_activo=<%=mant.getId_activo()%>&tipo=<%=mant.getTipo()%>&descrpcion=<%=mant.getFabricante()%>&materiales=<%=mant.getFecha_compra()%>'" class="btn btn-info">Editar</button>
+                                    <button onclick="window.location.href ='EditarMantenimientoPreventivos?id_activo=<%=mant.getId_activo()%>&tipo=<%=mant.getTipo()%>&descripcion=<%=mant.getDescripcion()%>&materiales=<%=mant.getMateriales()%>'" class="btn btn-info">Editar</button>
                                    
                                 </td>
                             </tr>
