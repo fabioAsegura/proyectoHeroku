@@ -120,12 +120,12 @@
                                  
                                    <div class="form-group">
                                     <label for="id_solicitante">ID Solicitante:</label>
-                                    <input  class="form-control" name="id_solicitante" value="<%=id_solicitante%>">
+                                    <input  class="form-control" name="id_solicitante" value="<%=id_solicitante%>"readonly="readonly">
                                 </div>
                                  
                                    <div class="form-group">
                                     <label for="id_trabajador">ID Trabajador:</label>
-                                    <input  class="form-control" name="id_trabajador" value="<%=id_trabajador%>"> 
+                                    <input  class="form-control" name="id_trabajador" value="<%=id_trabajador%>" readonly="readonly"> 
                                 </div>
                                 <br>
                                 <div class="span12">&nbsp;</div>
