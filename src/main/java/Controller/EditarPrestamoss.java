@@ -5,10 +5,9 @@
  */
 package Controller;
 
-import DAO.ActivoDAO;
 import DAO.PrestamoDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
+
 import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -52,14 +51,14 @@ public class EditarPrestamoss extends HttpServlet {
             PrestamoDAO dao = new PrestamoDAO();
 
         
-            String fecha_entrada = (String) request.getParameter("fecha_entrada");
-            String fecha_salida = (String) request.getParameter("fecha_salida");
-            String tipo = (String) request.getParameter("tipo");
-            String activo1 = (String) request.getParameter("activo1");
-            String activo2 = (String) request.getParameter("activo2");
-            String activo3 = (String) request.getParameter("activo3");
-            String activo4 = (String) request.getParameter("activo4");
-            String activo5 = (String) request.getParameter("activo5");
+            String fecha_entrada =request.getParameter("fecha_entrada");
+            String fecha_salida =  request.getParameter("fecha_salida");
+            String tipo =  request.getParameter("tipo");
+            String activo1 =  request.getParameter("activo1");
+            String activo2 =  request.getParameter("activo2");
+            String activo3 =  request.getParameter("activo3");
+            String activo4 =  request.getParameter("activo4");
+            String activo5 =  request.getParameter("activo5");
             int id_solicitante = Integer.parseInt(request.getParameter("id_solicitante"));
             int id_trabajador = Integer.parseInt(request.getParameter("id_trabajador"));
             int id_prestamo = Integer.parseInt(request.getParameter("id_prestamo"));
@@ -119,7 +118,7 @@ public class EditarPrestamoss extends HttpServlet {
       
 
             PrestamoDAO dao = new PrestamoDAO();
-            dao.updateActivo(id_prestamo, fecha_entrada, fecha_salida, tipo, activo1, activo2, activo3, activo4, activo5, id_solicitante, id_trabajador);
+            dao.updatePrestamo(id_prestamo, fecha_entrada, fecha_salida, tipo, activo1, activo2, activo3, activo4, activo5, id_solicitante, id_trabajador);
 
         } catch (SQLException ex) {
             Logger.getLogger(EditarActivos.class.getName()).log(Level.SEVERE, null, ex);

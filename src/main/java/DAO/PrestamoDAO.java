@@ -234,7 +234,7 @@ public class PrestamoDAO {
 
     }
      
-     public boolean updateActivo(int a ,String fecha_entrada,String fecha_salida,String tipo,String activo1,String activo2,String activo3, String activo4,String activo5, int id_solicitante,  int id_trabajador) throws SQLException, URISyntaxException {
+     public boolean updatePrestamo(int a ,String fecha_entrada,String fecha_salida,String tipo,String activo1,String activo2,String activo3, String activo4,String activo5, int id_solicitante,  int id_trabajador) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
         String query = "update activo set  fecha_entrada = ?, fecha_salida = ?, tipo = ?, activo1 = ?, activo2 = ?, activo3 = ?, activo4 = ?, activo5 = ?,id_solicitante = ?, id_trabajador = ? where id_solicitante = " + a;
