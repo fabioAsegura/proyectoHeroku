@@ -50,7 +50,7 @@ public class EditarPrestamoss extends HttpServlet {
         try {
             PrestamoDAO dao = new PrestamoDAO();
 
-        
+            int id_prestamo = Integer.parseInt(request.getParameter("id_prestamo"));
             String fecha_entrada =request.getParameter("fecha_entrada");
             String fecha_salida =  request.getParameter("fecha_salida");
             String tipo =  request.getParameter("tipo");
@@ -61,8 +61,8 @@ public class EditarPrestamoss extends HttpServlet {
             String activo5 =  request.getParameter("activo5");
             int id_solicitante = Integer.parseInt(request.getParameter("id_solicitante"));
             int id_trabajador = Integer.parseInt(request.getParameter("id_trabajador"));
-            int id_prestamo = Integer.parseInt(request.getParameter("id_prestamo"));
-          
+            
+            request.setAttribute("id_prestamo", id_prestamo);
             request.setAttribute("fecha_entrada", fecha_entrada);
             request.setAttribute("fecha_salida", fecha_salida);
             request.setAttribute("tipo", tipo);
@@ -73,7 +73,7 @@ public class EditarPrestamoss extends HttpServlet {
             request.setAttribute("activo5", activo5);
             request.setAttribute("id_solicitante", id_solicitante);
             request.setAttribute("id_trabajador", id_trabajador);
-            request.setAttribute("id_prestamo", id_prestamo);
+            
             
             
 

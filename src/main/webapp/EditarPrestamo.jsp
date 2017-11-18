@@ -71,7 +71,7 @@
                             String activo3=(String) request.getAttribute("activo3");
                             String activo4=(String) request.getAttribute("activo4");
                             String activo5= (String) request.getAttribute("activo5");
-                            int id_solicitante= (Integer) request.getAttribute("id_solicitente");
+                            int id_solicitante= (Integer) request.getAttribute("id_solicitante");
                             int id_trabajador= (Integer) request.getAttribute("id_trabajador");
                             
                             
