@@ -65,9 +65,10 @@
         <servlet-class>Controller.EditarSolicitantes</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>EditarPrestamos</servlet-name>
-        <servlet-class>Controller.EditarPrestamos</servlet-class>
+        <servlet-name>EditarPrestamoss</servlet-name>
+        <servlet-class>Controller.EditarPrestamoss</servlet-class>
     </servlet>
+    
     <servlet>
         <servlet-name>MantenimientoPreventivos</servlet-name>
         <servlet-class>Controller.MantenimientoPreventivos</servlet-class>
@@ -172,9 +173,11 @@
         <servlet-name>EditarSolicitantes</servlet-name>
         <url-pattern>/EditarSolicitantes</url-pattern>
     </servlet-mapping>
+    
+    
     <servlet-mapping>
-        <servlet-name>EditarPrestamos</servlet-name>
-        <url-pattern>/EditarPrestamos</url-pattern>
+        <servlet-name>EditarPrestamoss</servlet-name>
+        <url-pattern>/EditarPrestamoss</url-pattern>
     </servlet-mapping>
     
     

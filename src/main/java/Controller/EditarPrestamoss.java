@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author anfeg
  */
-public class EditarPrestamos extends HttpServlet {
+public class EditarPrestamoss extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
