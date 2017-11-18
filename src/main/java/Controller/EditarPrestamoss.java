@@ -101,7 +101,7 @@ public class EditarPrestamoss extends HttpServlet {
         
           try {
               
-              
+            int id_prestamo = Integer.parseInt(request.getParameter("id_solicitante"));
             String fecha_entrada = (String) request.getParameter("fecha_entrada");
             String fecha_salida = (String) request.getParameter("fecha_salida");
             String tipo = (String) request.getParameter("tipo");
@@ -118,7 +118,7 @@ public class EditarPrestamoss extends HttpServlet {
       
 
             PrestamoDAO dao = new PrestamoDAO();
-            dao.updateActivo(id_trabajador, fecha_entrada, fecha_salida, tipo, activo1, activo2, activo3, activo4, activo5, id_solicitante, id_trabajador);
+            dao.updateActivo(id_prestamo, fecha_entrada, fecha_salida, tipo, activo1, activo2, activo3, activo4, activo5, id_solicitante, id_trabajador);
 
         } catch (SQLException ex) {
             Logger.getLogger(EditarActivos.class.getName()).log(Level.SEVERE, null, ex);
