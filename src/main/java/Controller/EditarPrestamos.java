@@ -5,8 +5,14 @@
  */
 package Controller;
 
+import DAO.ActivoDAO;
+import DAO.PrestamoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -41,6 +47,43 @@ public class EditarPrestamos extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        try {
+            PrestamoDAO dao = new PrestamoDAO();
+
+        
+            String fecha_entrada = (String) request.getParameter("fecha_entrada");
+            String fecha_salida = (String) request.getParameter("fecha_salida");
+            String tipo = (String) request.getParameter("tipo");
+            String activo1 = (String) request.getParameter("activo1");
+            String activo2 = (String) request.getParameter("activo2");
+            String activo3 = (String) request.getParameter("activo3");
+            String activo4 = (String) request.getParameter("activo4");
+            String activo5 = (String) request.getParameter("activo5");
+            int id_solicitante = Integer.parseInt(request.getParameter("id_solicitante"));
+            int id_trabajador = Integer.parseInt(request.getParameter("id_trabajador"));
+
+          
+            request.setAttribute("fecha_entrada", fecha_entrada);
+            request.setAttribute("fecha_salida", fecha_salida);
+            request.setAttribute("tipo", tipo);
+            request.setAttribute("activo1", activo1);
+            request.setAttribute("activo2", activo2);
+            request.setAttribute("activo3", activo3);
+            request.setAttribute("activo4", activo4);
+            request.setAttribute("activo5", activo5);
+            request.setAttribute("id_solicitante", id_solicitante);
+            request.setAttribute("id_trabajador", id_trabajador);
+            
+            
+
+            request.getRequestDispatcher("EditarPrestamo.jsp").forward(request, response);
+
+        } catch (SQLException ex) {
+            Logger.getLogger(EditarActivos.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(EditarActivos.class.getName()).log(Level.SEVERE, null, ex);
+        }
       
     }
 
@@ -55,6 +98,35 @@ public class EditarPrestamos extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+          try {
+              
+              
+            String fecha_entrada = (String) request.getParameter("fecha_entrada");
+            String fecha_salida = (String) request.getParameter("fecha_salida");
+            String tipo = (String) request.getParameter("tipo");
+            String activo1 = (String) request.getParameter("activo1");
+            String activo2 = (String) request.getParameter("activo2");
+            String activo3 = (String) request.getParameter("activo3");
+            String activo4 = (String) request.getParameter("activo4");
+            String activo5 = (String) request.getParameter("activo5");
+            int id_solicitante = Integer.parseInt(request.getParameter("id_solicitante"));
+            int id_trabajador = Integer.parseInt(request.getParameter("id_trabajador"));
+              
+              
+           
+      
+
+            PrestamoDAO dao = new PrestamoDAO();
+            dao.updateActivo(id_trabajador, fecha_entrada, fecha_salida, tipo, activo1, activo2, activo3, activo4, activo5, id_solicitante, id_trabajador);
+
+        } catch (SQLException ex) {
+            Logger.getLogger(EditarActivos.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(EditarActivos.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        response.sendRedirect("Prestamoo");
+
      
     }
 
