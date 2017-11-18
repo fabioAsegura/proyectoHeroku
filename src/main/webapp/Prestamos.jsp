@@ -99,7 +99,7 @@
                                 <td><%=prestamo.getId_trabajador()%></td>
 
                                 <td>
-                                    <button onclick="window.location.href = 'EditarPrestamoss?id_prestamo=<%=prestamo.getId_prestamo()%>&fecha_entrada=<%=prestamo.getFecha_entrada()%>&fecha_salida=<%=prestamo.getFecha_salida()%>&activo1=<%=prestamo.getActivo1()%>&activo2=<%=prestamo.getActivo2()%>&activo3=<%=prestamo.getActivo3()%>&activo4=<%=prestamo.getActivo4()%>&activo5=<%=prestamo.getActivo5()%>&id_solicitate=<%=prestamo.getId_solicitante()%>&id_trabajador=<%=prestamo.getId_trabajador()%>'" class="btn btn-info">Editar</button>
+                                <button onclick="window.location.href = 'EditarPrestamoss?id_prestamo=<%=prestamo.getId_prestamo()%>&fecha_entrada=<%=prestamo.getFecha_entrada()%>&fecha_salida=<%=prestamo.getFecha_salida()%>&activo1=<%=prestamo.getActivo1()%>&activo2=<%=prestamo.getActivo2()%>&activo3=<%=prestamo.getActivo3()%>&activo4=<%=prestamo.getActivo4()%>&activo5=<%=prestamo.getActivo5()%>&id_solicitante=<%=prestamo.getId_solicitante()%>&id_trabajador=<%=prestamo.getId_trabajador()%>'" class="btn btn-info">Editar</button>
                                 </td>
                             </tr>
                             <% }
