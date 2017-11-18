@@ -78,7 +78,7 @@
                            
 
                         %>
-                        <form class="form-inline" action="EditarPrestamos" method="POST">
+                        <form class="form-inline" action="EditarPrestamoss" method="POST">
                            <div class="form-group">
                                 <label for="fecha_entrada">Fecha Entrada:</label>
                                 <input class="form-control" name="fecha_entrada" value="<%=fecha_entrada%>">
