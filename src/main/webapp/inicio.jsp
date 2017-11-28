@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Login</title>
+        <title>Principal</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -43,29 +43,23 @@
     </head>
     <body>
 
-        <%@include file="HeaderLogin.jsp"%>
+        <%@include file="Header.jsp"%>
+
         <div class="container-fluid text-center">    
             <div class="row content">
                 <div class="col-sm-2 sidenav">
 
                 </div>
                 <div class="col-sm-8 text-left"> 
-                    <h1>Login</h1>
+                    <h1>Bienvenido al Gestor de Laboratorio Universidad Sergio Arboleda</h1>
                     <p></p>
                     <hr>
-                    <div class="container">   
-                        <form class="form-inline" action="Loginn" method="POST">
-                            <div class="form-group">
-                                <label for="idequipo">Usuario:</label>
-                                <input  class="form-control" name="usuario">
-                            </div>
-                            <div class="form-group">
-                                <label for="nombre">Contrasena:</label>
-                                <input  class="form-control" name="contrasena">
-                            </div>
-                            <button type="submit" class="btn btn-default" name="Enviar">Enviar</button>
-                        </form>
+
+                    <div class="btn-group">
+                        <button onclick="window.location.href = 'Prestamoo'" type="button" class="btn-lg btn-default"> Nuevo Prestamo</button>
+                        <button onclick="window.location.href = 'Devoluciones.jsp'" type="button" class="btn-lg btn-default">Devoluciones</button>
                     </div>
+
                 </div>
 
             </div>

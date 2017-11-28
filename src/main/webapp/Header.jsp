@@ -7,11 +7,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="index.jsp">Laboratorio</a>
+                    <a class="navbar-brand" href="inicio.jsp">Laboratorio</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.jsp">Inicio</a></li>
+                        <li><a href="inicio.jsp">Inicio</a></li>
                         <li><a href="Prestamoo">Prestamos</a></li>
                         <li><a href="Activoo">Activos</a></li>
                         <li><a href="Solicitantee">Solicitante</a></li>

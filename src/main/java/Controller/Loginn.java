@@ -48,7 +48,7 @@ public class Loginn extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("Login.jsp").forward(request, response);
+        request.getRequestDispatcher("index.jsp").forward(request, response);
 
     }
 
@@ -64,7 +64,7 @@ public class Loginn extends HttpServlet {
             for(Login e : login){
                 if(e.getUsuario().equals(usuario) && e.getContrasena().equals(contrasena)){
                     request.getSession().setAttribute("usu", e);
-                    response.sendRedirect("index.jsp");
+                    response.sendRedirect("inicio.jsp");
                     return;
                 }
             }
