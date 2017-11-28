@@ -60,7 +60,7 @@ public class Loginn extends HttpServlet {
             String usuario = (String) request.getParameter("usuario");
             String contrasena = (String) request.getParameter("contrasena");
             LoginDAO a = new LoginDAO();
-            ArrayList<Login> login= a.getLogin(usuario, contrasena);
+            ArrayList<Login> login= a.getLogin();
             for(Login e : login){
                 if(e.getUsuario().equals(usuario) && e.getContrasena().equals(contrasena)){
                     request.getSession().setAttribute("usu", e);

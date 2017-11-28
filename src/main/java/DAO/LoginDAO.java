@@ -25,10 +25,10 @@ public class LoginDAO {
     public LoginDAO() throws SQLException, URISyntaxException {
         connection = DbUtil.getConnection();
     }
-    public ArrayList<Login> getLogin(String usuario, String contrasena) throws SQLException, URISyntaxException {
+    public ArrayList<Login> getLogin() throws SQLException, URISyntaxException {
         ArrayList<Login> login = null;
         boolean result = false;
-        String query = "SELECT * FROM login where usuario = " +usuario+ "and contrasena=" + contrasena  ;
+        String query = "SELECT * FROM login ";
         Connection connection = DbUtil.getConnection();
         try {
 
