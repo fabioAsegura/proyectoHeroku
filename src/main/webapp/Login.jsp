@@ -54,7 +54,7 @@
                     <p></p>
                     <hr>
                     <div class="container">   
-                        <form class="form-inline" action="" method="POST">
+                        <form class="form-inline" action="Loginn" method="POST">
                             <div class="form-group">
                                 <label for="idequipo">Usuario:</label>
                                 <input  class="form-control" name="usuario">
