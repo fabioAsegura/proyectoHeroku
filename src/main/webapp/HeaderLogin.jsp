@@ -7,18 +7,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="index.jsp">Laboratorio</a>
+                    <a class="navbar-brand" href="Loginn">Laboratorio</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.jsp">Inicio</a></li>
-                        <li><a href="Prestamoo">Prestamos</a></li>
-                        <li><a href="Activoo">Activos</a></li>
-                        <li><a href="Solicitantee">Solicitante</a></li>
-                        <li><a href="Auxiliarr">Auxiliar</a></li>
-                        <li><a href="Supervisorr">Supervisor</a></li>
-                        <li><a href="Categoriaa">Categoria</a></li>
-                        <li><a href="MantenimientoPreventivos">Mantenimiento Preventivo</a></li>
+                        <li><a href="Loginn">Login</a></li>
+                      
                     </ul>
 
                 </div>
