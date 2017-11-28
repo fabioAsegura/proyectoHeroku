@@ -256,6 +256,14 @@
         <url-pattern>/Prestadoss</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>Loginn</servlet-name>
+        <servlet-class>Controller.Loginn</servlet-class>
+    </servlet>
+        <servlet-mapping>
+        <servlet-name>Loginn</servlet-name>
+        <url-pattern>/Loginn</url-pattern>
+    </servlet-mapping>
     
     <session-config>
         <session-timeout>
