@@ -54,11 +54,7 @@ public class EditarPrestamoss extends HttpServlet {
             String fecha_entrada =request.getParameter("fecha_entrada");
             String fecha_salida =  request.getParameter("fecha_salida");
             String tipo =  request.getParameter("tipo");
-            String activo1 =  request.getParameter("activo1");
-            String activo2 =  request.getParameter("activo2");
-            String activo3 =  request.getParameter("activo3");
-            String activo4 =  request.getParameter("activo4");
-            String activo5 =  request.getParameter("activo5");
+            String activo =  request.getParameter("activo");         
             int id_solicitante = Integer.parseInt(request.getParameter("id_solicitante"));
             int id_trabajador = Integer.parseInt(request.getParameter("id_trabajador"));
             
@@ -66,11 +62,7 @@ public class EditarPrestamoss extends HttpServlet {
             request.setAttribute("fecha_entrada", fecha_entrada);
             request.setAttribute("fecha_salida", fecha_salida);
             request.setAttribute("tipo", tipo);
-            request.setAttribute("activo1", activo1);
-            request.setAttribute("activo2", activo2);
-            request.setAttribute("activo3", activo3);
-            request.setAttribute("activo4", activo4);
-            request.setAttribute("activo5", activo5);
+            request.setAttribute("activo", activo);         
             request.setAttribute("id_solicitante", id_solicitante);
             request.setAttribute("id_trabajador", id_trabajador);
             
@@ -105,11 +97,7 @@ public class EditarPrestamoss extends HttpServlet {
             String fecha_entrada = (String) request.getParameter("fecha_entrada");
             String fecha_salida = (String) request.getParameter("fecha_salida");
             String tipo = (String) request.getParameter("tipo");
-            String activo1 = (String) request.getParameter("activo1");
-            String activo2 = (String) request.getParameter("activo2");
-            String activo3 = (String) request.getParameter("activo3");
-            String activo4 = (String) request.getParameter("activo4");
-            String activo5 = (String) request.getParameter("activo5");
+            String activo = (String) request.getParameter("activo");    
             int id_solicitante = Integer.parseInt(request.getParameter("id_solicitante"));
             int id_trabajador = Integer.parseInt(request.getParameter("id_trabajador"));
               
@@ -118,7 +106,7 @@ public class EditarPrestamoss extends HttpServlet {
       
 
             PrestamoDAO dao = new PrestamoDAO();
-            dao.updatePrestamo(id_prestamo, fecha_entrada, fecha_salida, tipo, activo1, activo2, activo3, activo4, activo5, id_solicitante, id_trabajador);
+            dao.updatePrestamo(id_prestamo, fecha_entrada, fecha_salida, tipo, activo, id_solicitante, id_trabajador);
 
         } catch (SQLException ex) {
             Logger.getLogger(EditarActivos.class.getName()).log(Level.SEVERE, null, ex);
