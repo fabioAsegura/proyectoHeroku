@@ -73,28 +73,9 @@
                                 </div>
                             <div class="span12">&nbsp;</div>
                             <div class="form-group">
-                                <label for="activo1">Activo 1:</label>
-                                <input  class="form-control" name="activo1">
-                               
-                                <div class="form-group">
-                                    <label for="activo2">Activo 2:</label>
-                                    <input  class="form-control" name="activo2">
-                                </div>
-                                   <div class="form-group">
-                                    <label for="activo3">Activo 3:</label>
-                                    <input  class="form-control" name="activo3">
-                                </div>
-                                
-                                   <div class="form-group">
-                                    <label for="activo4">Activo 4:</label>
-                                    <input  class="form-control" name="activo4">
-                                </div>
-                                <div class="span12">&nbsp;</div>
-                                   <div class="form-group">
-                                    <label for="activo5">Activo 5:</label>
-                                    <input  class="form-control" name="activo5">
-                                </div>
-                                 
+                                <label for="activo1">Activo:</label>
+                                <input  class="form-control" name="activo">
+                               </div>                                   
                                    <div class="form-group">
                                     <label for="id_solicitante">ID Solicitante:</label>
                                     <input  class="form-control" name="id_solicitante">
