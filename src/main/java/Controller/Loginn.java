@@ -69,8 +69,8 @@ public class Loginn extends HttpServlet {
                 }
             }
             request.setAttribute("respuesta", "hola");
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("Loginn");
-            rd.forward(request, response);
+        
+            response.sendRedirect("Loginn");
             
         } catch (SQLException ex) {
             Logger.getLogger(Loginn.class.getName()).log(Level.SEVERE, null, ex);
