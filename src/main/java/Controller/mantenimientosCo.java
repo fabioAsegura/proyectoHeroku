@@ -109,6 +109,8 @@ public class mantenimientosCo extends HttpServlet {
 
            } catch (SQLException ex) {
             Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
