@@ -10,7 +10,11 @@ package Model;
  * @author User
  */
 public class mantenimientos {
-
+   private int id;
+   private int idAcivo;
+   private String descripcion;
+   private String piezasCambiadas;
+   
     public mantenimientos(int id, int idAcivo, String descripcion, String piezasCambiadas) {
         this.id = id;
         this.idAcivo = idAcivo;
@@ -50,8 +54,5 @@ public class mantenimientos {
         this.piezasCambiadas = piezasCambiadas;
     }
     
-   private int id;
-   private int idAcivo;
-   private String descripcion;
-   private String piezasCambiadas;
+   
 }
