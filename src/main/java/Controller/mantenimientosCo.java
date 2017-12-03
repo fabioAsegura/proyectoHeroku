@@ -60,9 +60,7 @@ public class mantenimientosCo extends HttpServlet {
 
             request.getRequestDispatcher("mantenimientoCorrectivo.jsp").forward(request, response);
  
-        } catch (SQLException ex) {
-            Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (URISyntaxException ex) {
+        } catch (SQLException | URISyntaxException ex) {
             Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }
