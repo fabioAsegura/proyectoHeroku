@@ -8,7 +8,7 @@
         <servlet-name>EliminarActivo</servlet-name>
         <servlet-class>Controller.EliminarActivos</servlet-class>
     </servlet>
-    <servlet>
+    <servlet> 
         <servlet-name>mantenimientosCo</servlet-name>
         <servlet-class>Controller.mantenimientosCo</servlet-class>
     </servlet>
