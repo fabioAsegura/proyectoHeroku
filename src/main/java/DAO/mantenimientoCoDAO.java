@@ -65,7 +65,7 @@ public class mantenimientoCoDAO {
     public ArrayList<mantenimientos> getAllMantenimiento() throws SQLException, URISyntaxException {
         ArrayList<mantenimientos> mantenimiento = null;
         boolean result = false;
-        String query = "SELECT * FROM mantenimientosCo";
+        String query = "SELECT * FROM mantenimientosco";
         Connection connection = DbUtil.getConnection();
         try {
 
@@ -82,10 +82,10 @@ public class mantenimientoCoDAO {
                     mantenimiento = new ArrayList<mantenimientos>();
                 }
                 mantenimientos registro=new mantenimientos(id, idActivo, descripcion, piezasCambiadas);
-                id = rs.getInt("id");
+                id = rs.getInt("IdMantenimientos");
                 registro.setId(id);
 
-                idActivo = rs.getInt("idActivo");
+                idActivo = rs.getInt("descripcion");
                 registro.setIdAcivo(idActivo);
 
                 descripcion = rs.getString("descripcion");
@@ -114,4 +114,4 @@ public class mantenimientoCoDAO {
         return mantenimiento;
 
     }
-}
+     }
