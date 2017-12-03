@@ -56,7 +56,7 @@
                     <h1>Mantenimientos Correctivos</h1>
                     <div class="span12">&nbsp;</div>
                     <button onclick="window.location.href = 'NuevoMantenimiento.jsp'" type="button" class="btn-sm btn-success">Nuevo Mantenimiento</button>
-                    <button onclick="window.location.href = 'EliminarMantenimiento.jsp'" type="button" class="btn-sm btn-success">Eliminar Mantenimiento</button>
+                    <button onclick="window.location.href = 'EliminarMantenimiento.jsp'" type="button" class="btn-sm btn-danger">Eliminar Mantenimiento</button>
                     <div class="span12">&nbsp;</div>
 
 
@@ -71,7 +71,7 @@
                              <% if (request.getAttribute("listaMantenimiento") != null) {
                                     ArrayList<mantenimientos> list = (ArrayList<mantenimientos>) request.getAttribute("listaMantenimiento");
                                     if (list != null)
-                                        for (mantenimientos mantenimiento : list) {
+                                        for (mantenimientos mant : list) {
 
 
                             %>
@@ -86,6 +86,7 @@
                                 }
                              %>
                         </table>
+                         
                     </div>
                     <hr>
 
