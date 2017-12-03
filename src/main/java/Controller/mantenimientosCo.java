@@ -51,13 +51,23 @@ public class mantenimientosCo extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+         try {
+            mantenimientoCoDAO obj = new mantenimientoCoDAO();
+
+            ArrayList<mantenimientos> lista = (ArrayList<mantenimientos>) obj.getAllMantenimiento();
+
+            request.setAttribute("listaMantenimiento", lista);
 
             request.getRequestDispatcher("mantenimientoCorrectivo.jsp").forward(request, response);
  
-   
-    
+        } catch (SQLException ex) {
+            Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
+        } 
     }
+    
+
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -70,16 +80,35 @@ public class mantenimientosCo extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        
+           try {
+            int id = Integer.parseInt(request.getParameter("id"));
+            int idActivo = Integer.parseInt(request.getParameter("idActivo"));
+            String descripcion = (String) request.getParameter("descripcion");
+            String piezasCambiadas = (String) request.getParameter("piezasCambiadas");
+
+            mantenimientoCoDAO dao = new mantenimientoCoDAO();
+            mantenimientos tab = new mantenimientos(id, idActivo, descripcion, piezasCambiadas);
+
+            dao.addmantenimiento(tab);
 
             response.sendRedirect("mantenimientosCo");
 
-      
+           } catch (SQLException ex) {
+            Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+    }
+
     /**
      * Returns a short description of the servlet.
      *
      * @return a String containing servlet description
      */
-    
-}
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
 }
