@@ -32,7 +32,7 @@ public class mantenimientoCoDAO {
     public boolean addmantenimiento(mantenimientos mantenimiento) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
-        String query = "insert into supervisor (mantenimiento.ID,mantenimiento.IDACTIVO,mantenimiento.DESCRIPCION,mantenimiento.PIEZASCAMBIADAS) values (?, ?, ?, ? );";
+        String query = "() values (?, ?, ?, ? );";
         PreparedStatement preparedStmt = null;
         try { 
             preparedStmt = connection.prepareStatement(query);

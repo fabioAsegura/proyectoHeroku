@@ -1,7 +1,6 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.mantenimientos"%>
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
         <title>mantenimiento</title>
