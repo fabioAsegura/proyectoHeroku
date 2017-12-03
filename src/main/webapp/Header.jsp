@@ -17,7 +17,6 @@
                         <li><a href="Solicitantee">Solicitante</a></li>
                         <li><a href="Auxiliarr">Auxiliar</a></li>
                         <li><a href="Supervisorr">Supervisor</a></li>
-                        <li><a href="Categoriaa">Categoria</a></li>
                         <li><a href="mantenimientosCo">Mantenimiento Correctivo</a></li>
                     </ul>
 

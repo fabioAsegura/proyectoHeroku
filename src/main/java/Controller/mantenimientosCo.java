@@ -73,7 +73,7 @@ public class mantenimientosCo extends HttpServlet {
 
             request.setAttribute("listaMantenimiento", lista);
 
-            request.getRequestDispatcher("mantenimientoCorrectivo.jsp").forward(request, response);
+            request.getRequestDispatcher("mantenimientosCo.jsp").forward(request, response);
  
         } catch (SQLException ex) {
             Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
@@ -105,7 +105,7 @@ public class mantenimientosCo extends HttpServlet {
 
             dao.addmantenimiento(tab);
 
-            response.sendRedirect("mantenimientosCo");
+            response.sendRedirect("mantenimientosCo.jsp");
 
            } catch (SQLException ex) {
             Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
