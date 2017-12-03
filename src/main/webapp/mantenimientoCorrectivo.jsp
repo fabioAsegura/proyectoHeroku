@@ -65,8 +65,8 @@
                             <tr>
                                 <th>ID</th>
                                 <th>ID Activo</th>
-                                <th>Piezas cambiadas</th>
                                 <th>Descripcion</th>
+                                <th>Piezas Cambiadas</th>
                             </tr>
                              <% if (request.getAttribute("listaMantenimiento") != null) {
                                     ArrayList<mantenimientos> list = (ArrayList<mantenimientos>) request.getAttribute("listaMantenimiento");
@@ -77,9 +77,9 @@
                             %>
                             <tr>
                                 <td><%=mant.getId()%></td>
-                                <td><%=mant.getIdActivo()%></td>
-                                <td><%=mant.getDescripcion%></td>
-                                <td><%=mant.getPiezasCambiadas%></td>
+                                <td><%=mant.getIdAcivo()%></td>
+                                <td><%=mant.getDescripcion()%></td>
+                                <td><%=mant.getPiezasCambiadas()%></td>
                                 
                             </tr>
                             <% }
