@@ -94,6 +94,7 @@ public class mantenimientosCo extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        /*
            try {
             int id = Integer.parseInt(request.getParameter("id"));
             int idActivo = Integer.parseInt(request.getParameter("idActivo"));
@@ -104,14 +105,15 @@ public class mantenimientosCo extends HttpServlet {
             mantenimientos tab = new mantenimientos(id, idActivo, descripcion, piezasCambiadas);
 
             dao.addmantenimiento(tab);
-
+*/
             response.sendRedirect("mantenimientosCo");
-
+/*
            } catch (SQLException ex) {
             Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
         } catch (URISyntaxException ex) {
             Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
         }
+            */
     }
 
     /**
