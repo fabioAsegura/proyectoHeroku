@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author User
  */
-@WebServlet(name = "mantenimientosCo", urlPatterns = {"/mantenimientosCo"})
+
 public class mantenimientosCo extends HttpServlet {
 
     /**
@@ -73,7 +73,7 @@ public class mantenimientosCo extends HttpServlet {
 
             request.setAttribute("listaMantenimiento", lista);
 
-            request.getRequestDispatcher("mantenimientosCo.jsp").forward(request, response);
+            request.getRequestDispatcher("mantenimientoCorrectivo.jsp").forward(request, response);
  
         } catch (SQLException ex) {
             Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
@@ -105,7 +105,7 @@ public class mantenimientosCo extends HttpServlet {
 
             dao.addmantenimiento(tab);
 
-            response.sendRedirect("mantenimientosCo.jsp");
+            response.sendRedirect("mantenimientosCo");
 
            } catch (SQLException ex) {
             Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
