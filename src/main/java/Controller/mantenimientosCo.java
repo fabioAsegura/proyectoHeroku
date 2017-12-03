@@ -51,20 +51,9 @@ public class mantenimientosCo extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         try {
-            mantenimientoCoDAO obj = new mantenimientoCoDAO();
-
-            ArrayList<mantenimientos> lista = (ArrayList<mantenimientos>) obj.getAllMantenimiento();
-
-            request.setAttribute("listaMantenimiento", lista);
-
+        
             request.getRequestDispatcher("mantenimientoCorrectivo.jsp").forward(request, response);
  
-        } catch (SQLException ex) {
-            Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (URISyntaxException ex) {
-            Logger.getLogger(mantenimientosCo.class.getName()).log(Level.SEVERE, null, ex);
-        } 
     }
     
 
