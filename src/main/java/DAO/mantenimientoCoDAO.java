@@ -32,14 +32,14 @@ public class mantenimientoCoDAO {
     public boolean addmantenimiento(mantenimientos mantenimiento) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
-        String query = "() values (?, ?, ?, ? );";
+        String query = "insert into mantenimientosco (idmantenimientos,descripcion,piezascambiadas,idactivo) values (?, ?, ?, ? );";
         PreparedStatement preparedStmt = null;
         try { 
             preparedStmt = connection.prepareStatement(query);
             preparedStmt.setInt(1, mantenimiento.getId());
-            preparedStmt.setInt(2, mantenimiento.getIdAcivo());
-            preparedStmt.setString(3, mantenimiento.getDescripcion());
-            preparedStmt.setString(4, mantenimiento.getPiezasCambiadas());
+            preparedStmt.setString(2, mantenimiento.getDescripcion());
+            preparedStmt.setString(3, mantenimiento.getPiezasCambiadas());
+                preparedStmt.setInt(4, mantenimiento.getIdAcivo());
             result = preparedStmt.execute();
         } catch (SQLException e) {
             e.printStackTrace();
