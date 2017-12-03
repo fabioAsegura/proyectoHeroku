@@ -9,6 +9,10 @@
         <servlet-class>Controller.EliminarActivos</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>mantenimientosCo</servlet-name>
+        <servlet-class>Controller.mantenimientosCo</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>BuscarActivos</servlet-name>
         <servlet-class>Controller.BuscarActivos</servlet-class>
     </servlet>
@@ -246,7 +250,10 @@
         <servlet-name>NoPrestadoss</servlet-name>
         <url-pattern>/NoPrestadoss</url-pattern>
     </servlet-mapping>
-    
+    <servlet-mapping>
+        <servlet-name>mantenimientosCo</servlet-name>
+        <url-pattern>/mantenimientosCo</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>Prestadoss</servlet-name>
         <servlet-class>Controller.Prestadoss</servlet-class>
