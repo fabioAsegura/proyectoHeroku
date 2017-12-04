@@ -64,7 +64,7 @@
                                     <%
                                         if (request.getAttribute("mantenimiento") != null) {
                                             ArrayList<mantenimientos> array = (ArrayList<mantenimientos>) request.getAttribute("mantenimiento");
-                                            for (mantenimiento a : array) {
+                                            for (mantenimientos a : array) {
                                     %> 
                                     <option value="<%=a.getId()%>"><%=a.getId()%></option> 
                                     <%      }
