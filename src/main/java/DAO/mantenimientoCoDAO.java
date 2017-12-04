@@ -50,7 +50,7 @@ public class mantenimientoCoDAO {
     public boolean deletemantenimiento(int a) throws SQLException, URISyntaxException {
         boolean result = false;
         Connection connection = DbUtil.getConnection();
-        String query = "delete from mantenimiento where ID = ?";
+        String query = "delete from mantenimientosco where idmantenimientos = ?";
         PreparedStatement preparedStmt = null;
         try {
             preparedStmt = connection.prepareStatement(query);
