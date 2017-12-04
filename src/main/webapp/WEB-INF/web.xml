@@ -8,6 +8,10 @@
         <servlet-name>EliminarActivo</servlet-name>
         <servlet-class>Controller.EliminarActivos</servlet-class>
     </servlet>
+       <servlet>
+        <servlet-name>EliminarMantenimiento</servlet-name>
+        <servlet-class>Controller.EliminarMantenimiento</servlet-class>
+    </servlet>
     <servlet> 
         <servlet-name>mantenimientosCo</servlet-name>
         <servlet-class>Controller.mantenimientosCo</servlet-class>
@@ -88,6 +92,10 @@
      <servlet-mapping>
         <servlet-name>BuscarMantenimientoPreventivos</servlet-name>
         <url-pattern>/BuscarMantenimientoPreventivos</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>EliminarMantenimiento</servlet-name>
+        <url-pattern>/EliminarMantenimiento</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>EditarMantenimientoPreventivos</servlet-name>

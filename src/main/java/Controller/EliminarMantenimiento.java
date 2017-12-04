@@ -47,10 +47,10 @@ public class EliminarMantenimiento extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            ArrayList activos = new ArrayList(); 
+            ArrayList mantenimiento = new ArrayList(); 
             mantenimientoCoDAO a = new mantenimientoCoDAO();
-            activos = a.getAllMantenimiento();
-            request.setAttribute("activos", activos);
+            mantenimiento = a.getAllMantenimiento();
+            request.setAttribute("mantenimiento", mantenimiento);
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/EliminarMantenimiento.jsp");
             rd.forward(request, response);
 
@@ -83,7 +83,7 @@ public class EliminarMantenimiento extends HttpServlet {
             Logger.getLogger(EliminarMantenimiento.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        response.sendRedirect("MantenimientoPreventivos");
+        response.sendRedirect("mantenimientosCo");
     }
 
     /**

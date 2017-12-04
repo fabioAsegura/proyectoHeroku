@@ -1,9 +1,9 @@
 <%@page import="java.util.ArrayList"%>
-<%@page import="Model.Supervisor"%>
+<%@page import="Model.mantenimientos"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Eliminar Supervisor</title>
+        <title>Eliminar Mantenimiento</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -53,18 +53,18 @@
 
                 </div>
                 <div class="col-sm-8 text-left"> 
-                    <h1>Eliminar Supervisor</h1>
+                    <h1>Eliminar Mantenimientos Correctivos</h1>
                     <p></p>
                     <hr>
                     <div class="container">   
                         <form class="form-inline" action="EliminarSupervisores" method="POST">
                             <div class="form-group">
                                 <label for="idusuario">ID Mantenimiento:</label>
-                                <select  class="form-control" name="eliminarSupervisor">
+                                <select  class="form-control" name="eliminarMantenimiento">
                                     <%
-                                        if (request.getAttribute("supervisores") != null) {
-                                            ArrayList<Supervisor> array = (ArrayList<Supervisor>) request.getAttribute("supervisores");
-                                            for (Supervisor a : array) {
+                                        if (request.getAttribute("mantenimiento") != null) {
+                                            ArrayList<mantenimientos> array = (ArrayList<mantenimientos>) request.getAttribute("mantenimiento");
+                                            for (mantenimiento a : array) {
                                     %> 
                                     <option value="<%=a.getId()%>"><%=a.getId()%></option> 
                                     <%      }
