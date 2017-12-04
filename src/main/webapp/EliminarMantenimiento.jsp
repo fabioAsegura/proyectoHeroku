@@ -57,7 +57,7 @@
                     <p></p>
                     <hr>
                     <div class="container">   
-                        <form class="form-inline" action="EliminarSupervisores" method="POST">
+                        <form class="form-inline" action="EliminarMantenimiento" method="POST">
                             <div class="form-group">
                                 <label for="idusuario">ID Mantenimiento:</label>
                                 <select  class="form-control" name="eliminarMantenimiento">

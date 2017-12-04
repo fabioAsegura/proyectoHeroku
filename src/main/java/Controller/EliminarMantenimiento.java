@@ -73,8 +73,8 @@ public class EliminarMantenimiento extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        int idA = Integer.parseInt(request.getParameter("eliminarMantenimiento"));
         try {
+             int idA = Integer.parseInt(request.getParameter("eliminarMantenimiento"));
             mantenimientoCoDAO a = new mantenimientoCoDAO();
             a.deletemantenimiento(idA);
         } catch (SQLException ex) {
