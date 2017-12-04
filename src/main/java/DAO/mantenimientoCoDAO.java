@@ -82,16 +82,16 @@ public class mantenimientoCoDAO {
                     mantenimiento = new ArrayList<mantenimientos>();
                 }
                 mantenimientos registro=new mantenimientos(id, idActivo, descripcion, piezasCambiadas);
-                id = rs.getInt("IdMantenimientos");
+                id = rs.getInt("idmantenimientos");
                 registro.setId(id);
 
-                idActivo = rs.getInt("descripcion");
+                idActivo = rs.getInt("idactivo");
                 registro.setIdAcivo(idActivo);
 
                 descripcion = rs.getString("descripcion");
                 registro.setDescripcion(descripcion);
 
-                piezasCambiadas = rs.getString("piezasCambiadas");
+                piezasCambiadas = rs.getString("piezascambiadas");
                 registro.setPiezasCambiadas(piezasCambiadas);
 
                 
